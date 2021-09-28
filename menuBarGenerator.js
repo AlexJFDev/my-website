@@ -50,7 +50,8 @@ function makeList() {
 
     // Add listItem to the listElement
     listElement.appendChild(listItem);
+    console.log(listItem)
+    console.log(listElement)
   }
-  listElement.appendChild(`<li><a href="`+directoryDepth+`/index.html">Home</a></li>`)
 }
 makeList();
