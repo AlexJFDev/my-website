@@ -30,9 +30,6 @@ function makeList() {
       <a href="https://ict.gctaa.net/sections/webdesign/students.html">Other Websites</a>
     </div>
   </li>`
-  // Set up a loop that goes through the items in listItems one at a time
-  numberOfListItems = listData.length, listItem, i;
-
   // Add it to the page
   document.getElementsByTagName('body')[0].appendChild(listContainer);
   listContainer.appendChild(listElement);
