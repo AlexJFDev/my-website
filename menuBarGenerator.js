@@ -2,7 +2,7 @@ function makeList() {
   // Establish the array which acts as a data source for the list
   directoryDepth = ".".repeat(window.location.href.replace(/[^/A]/g, "").length-2)
   let listData = [
-    '<a href="`+directoryDepth+`/index.html">Home</a>',
+    `<a href="`+directoryDepth+`/index.html">Home</a>`,
     `<li class="dropdown">
       <a href="javascript:void(0)" class="dropbtn">Examples</a>
       <div class="dropdown-content">
