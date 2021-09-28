@@ -6,7 +6,7 @@ function makeList() {
     `<li class="dropdown">
       <a href="javascript:void(0)" class="dropbtn">Examples</a>
       <div class="dropdown-content">
-        <a href="`+directoryDepth+`Examples/Block_Level_Elements.html">Block Level Elements</a>
+        <a href="`+directoryDepth+`/Examples/Block_Level_Elements.html">Block Level Elements</a>
         <a href="Examples/Desciptive_Lists.html">Descriptive Lists</a>
         <a href="Examples/Getting_Down_With_HTML.html">Getting Down With HTML</a>
         <a href="Examples/Inline_Elements.html">Inline Elements</a>
