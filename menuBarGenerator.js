@@ -1,0 +1,55 @@
+function makeList() {
+  // Establish the array which acts as a data source for the list
+  directoryDepth = ".".repeat(window.location.href.replace(/[^/A]/g, "").length-2)
+  let listData = [
+    '<a href="index.html">Home</a>',
+    `<li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Examples</a>
+      <div class="dropdown-content">
+        <a href="`+directoryDepth+`Examples/Block_Level_Elements.html">Block Level Elements</a>
+        <a href="Examples/Desciptive_Lists.html">Descriptive Lists</a>
+        <a href="Examples/Getting_Down_With_HTML.html">Getting Down With HTML</a>
+        <a href="Examples/Inline_Elements.html">Inline Elements</a>
+        <a href="Examples/Learning_Web_Development.html">Learning Web Development</a>
+        <a href="Examples/Object_Elements.html">Object Elements</a>
+        <a href="Examples/Ordered_Lists.html">Ordered Lists</a>
+        <a href="Examples/Special_Characters.html">Special Characters</a>
+        <a href="Examples/Unordered_Lists.html">Unordered lists</a>
+      </div>
+    </li>`,
+    `<li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Templates</a>
+      <div class="dropdown-content">
+        <a href="Templates/Template_Page.html">Template Page</a>
+      </div>
+    </li>`,
+    `<li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Important Links</a>
+      <div class="dropdown-content">
+        <a href="https://ict.gctaa.net/sections/webdesign/students.html">Other Websites</a>
+      </div>
+    </li>`
+  ],
+  // Make a container element for the list
+  listContainer = document.createElement('div'),
+  // Make the list
+  listElement = document.createElement('ul'),
+  // Set up a loop that goes through the items in listItems one at a time
+  numberOfListItems = listData.length, listItem, i;
+
+  // Add it to the page
+  document.getElementsByTagName('body')[0].appendChild(listContainer);
+  listContainer.appendChild(listElement);
+
+  for (i = 0; i < numberOfListItems; ++i) {
+    // create an item for each one
+    listItem = document.createElement('li');
+
+    // Add the item text
+    listItem.innerHTML = listData[i];
+
+    // Add listItem to the listElement
+    listElement.appendChild(listItem);
+  }
+}
+makeList();
