@@ -3,7 +3,7 @@ function makeList() {
   listContainer = document.createElement('div');
   listElement = document.createElement('ul');
   listElement.innerHTML =
-  `<a href="`+directoryDepth+`/index.html">Home</a>
+  `<li><a href="`+directoryDepth+`/index.html">Home</a></li>
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Examples</a>
     <div class="dropdown-content">
