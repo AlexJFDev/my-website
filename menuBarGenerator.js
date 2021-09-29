@@ -1,8 +1,9 @@
 directoryDepth = ".".repeat(window.location.href.replace(/[^/A]/g, "").length-2)
 listContainer = document.createElement('div');
 listElement = document.createElement('ul');
+listElement.className = "dropdownMenu";
 listElement.innerHTML =
-`<li><a href="`+directoryDepth+`/index.html">Home</a></li>
+`<li class="dropdownButton"><a href="`+directoryDepth+`/index.html">Home</a></li>
 <li class="dropdown">
   <a href="javascript:void(0)" class="dropbtn">Examples</a>
   <div class="dropdown-content">
