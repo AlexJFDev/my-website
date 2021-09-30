@@ -8,7 +8,7 @@ listElement.innerHTML =
   <a href="javascript:void(0)" class="dropbtn">Examples</a>
   <div class="dropdown-content">
     <a href="`+directoryDepth+`/Examples/Block_Level_Elements.html">Block Level Elements</a>
-    <a href="`+directoryDepth+`/Examples/Inline_Elements.html" style="background-color: rgb(255, 0, 255);">Inline Elements</a>
+    <a href="`+directoryDepth+`/Examples/Inline_Elements.html">Inline Elements</a>
     <a href="`+directoryDepth+`/Examples/Object_Elements.html">Object Elements</a>
     <a href="`+directoryDepth+`/Examples/Special_Characters.html">Special Characters</a>
     <a href="`+directoryDepth+`/Examples/Descriptive_Lists.html">Descriptive Lists</a>
