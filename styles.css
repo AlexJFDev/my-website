@@ -1,7 +1,7 @@
 * {
     font-family: courier;
   }
-  
+
 .dropdownMenu {
   list-style-type: none;
   margin: 0;
@@ -51,8 +51,6 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
 }
 .blinker {
   animation: blinker 3s linear infinite;
