@@ -4,12 +4,18 @@
     <meta charset="utf-8">
     <title>Alex's Home Page in HTML!</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+      @import url(../style.css);
+      .blinker {
+          animation: blinker 1s linear infinite;
+      }
+    </style>
   </head>
   <body>
     <!-- content starts below here -->
     <script type="text/javascript" src="menuBarGenerator.js"></script>
 
-    <h1 style="animation: blinker 1s linear infinite;">Alex's Home Page</h1>
+    <h1 class="blinker">Alex's Home Page</h1>
     <footer style="text-align: center;">
     </footer>
     <!-- content ends above here -->
