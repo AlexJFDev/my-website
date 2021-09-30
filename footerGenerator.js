@@ -4,7 +4,7 @@ filename = filename.replace(/_/g, ' ');
 var periodIndex = filename.indexOf('.')
 filename = filename.slice(0,periodIndex);
 for (let i = 0; i < document.getElementsByClassName("generatedFooter").length; i++) {
-  document.getElementsByClassName("generatedFooter")[i].innerHTML = filename;
+  document.getElementsByClassName("generatedFooter")[i].innerHTML = "<p>Footer</p>";
 }
 /*
 `<hr>
