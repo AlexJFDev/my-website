@@ -6,8 +6,21 @@
     <link rel="stylesheet" href="styles.css">
     <style>
       @import url(../style.css);
+      li {
+        margin-top: 10px;
+      }
       .blinker {
-          animation: blinker 1s linear infinite;
+        animation: blinker 1s linear infinite;
+      }
+      @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
+      }
+      section#changeOfPlans {
+        padding: 20px;
+        padding-left: 60px;
+        border: 1px solid #000;
       }
     </style>
   </head>
@@ -15,7 +28,9 @@
     <!-- content starts below here -->
     <script type="text/javascript" src="menuBarGenerator.js"></script>
 
-    <h1 class="blinker">Alex's Home Page</h1>
+    <section id="changeOfPlans" class="blinker">
+      <h1>Alex's Home Page</h1>
+    </section>
     <footer style="text-align: center;">
     </footer>
     <!-- content ends above here -->
