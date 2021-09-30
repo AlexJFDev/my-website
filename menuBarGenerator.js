@@ -29,7 +29,7 @@ listElement.innerHTML =
   <div class="dropdown-content">
     <a href="https://ict.gctaa.net/sections/webdesign/students.html">Other Websites</a>
   </div>
-</li>`
+</li>`;
 
 document.getElementsByTagName('body')[0].appendChild(listContainer);
 listContainer.appendChild(listElement);
