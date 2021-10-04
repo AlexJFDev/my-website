@@ -66,6 +66,6 @@ var menuStr =
 </li>`;
 console.log(menuStr);
 
-var menuBar = document.getElementById("menuBar");
-console.log(menuBar);
-menuBar.innerHTML = menuStr;
+var menuList = document.getElementById("menuBar");
+console.log(menuList);
+menuList.innerHTML = menuStr;
