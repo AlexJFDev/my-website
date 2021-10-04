@@ -8,6 +8,6 @@ linkStr += loc;
 linkStr += '?profile=css3">\n<strong> CSS </strong> Valid! </a>'
 console.log(linkStr);
 
-var footer = document.getElementById("vLinks");
+var footer = document.getElementById("verifFooter");
 console.log(footer);
 footer.innerHTML = linkStr;
