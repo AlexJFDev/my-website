@@ -2,14 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title class="heading"></title>
+    <title class="heading">This title will be replaced</title>
     <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
-    <!-- content starts below here -->
-    <script type="text/javascript" src="../menuBarGenerator.js"></script>
+  <!-- content starts below here -->
+    <ul id="menuBar" class="dropdownMenu">
+    </ul>
 
-    <h1 class="heading"></h1>
+    <h1 class="heading">This heading will be replaced</h1>
+    <!-- main content starts below here -->
 
     <p>Inline  Elements add formatting to text</p>
     <p><strong>This text is STRONG (strong)</strong></p>
@@ -24,9 +26,15 @@
     <p><s>This text is inside a strikethrough (s) element</s></p>
     <p><span>This text is inside a span (span) element</span>, span doesn't seem to do much of anything.</p>
 
-    <script type="text/javascript" src="../headingGenerator.js"></script>
-    <footer style="text-align: center;">
+    <!-- main content ends above here -->
+    <footer id="verifFooter" style="text-align: center;">
     </footer>
+
+    <!-- Javascript imports start below here -->
+    <script src="../headingGenerator.js"></script>
+    <script src="../menuBarGenerator.js"></script>
+    <script src="../footerGenerator.js"></script>
+    <!-- Javascript imports end above here -->
     <!-- content ends above here -->
   </body>
 </html>
