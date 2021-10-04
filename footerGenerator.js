@@ -1,14 +1,13 @@
-webPath = window.location.href;
-footerElement = document.createElement('ul');
-footerElement.style = "text-align: center;";
-footerElement.innerHTML =
-`<hr>
-<a href="http://validator.w3.org/check?uri=`+webPath+`">
-<strong> HTML </strong> Valid! </a> &nbsp;
-<a href="http://jigsaw.w3.org/css-validator/validator?uri=`+webPath+`?profile=css3">
-<strong> CSS </strong> Valid! </a>`;
+var loc = window.location.href;
 
-document.getElementsByTagName('body')[0].appendChild(footerElement);
-listContainer.appendChild(footerElement);
+var linkStr = '<a href="http://validator.w3.org/check?uri=';
+linkStr += loc;
+linkStr += '">\n<strong> HTML </strong> Valid! </a> |';
+linkStr +=' <a href="http://jigsaw.w3.org/css-validator/validator?uri='
+linkStr += loc;
+linkStr += '?profile=css3">\n<strong> CSS </strong> Valid! </a>'
+console.log(linkStr);
 
-document.getElementById("vLinks").innerHTML =
+var footer = document.getElementById("vLinks");
+console.log(footer);
+footer.innerHTML = linkStr;
