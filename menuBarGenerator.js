@@ -35,6 +35,7 @@ listElement.innerHTML =
 document.getElementsByTagName('body')[0].appendChild(listContainer);
 listContainer.appendChild(listElement);*/
 
+directoryDepth = ".".repeat(window.location.href.replace(/[^/A]/g, "").length-2)
 var menuStr =
 `<li class="dropdownButton"><a href="`+directoryDepth+`/index.html">Home</a></li>
 <li class="dropdown">
