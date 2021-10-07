@@ -22,12 +22,12 @@ var menuStr =
     <a href="`+directoryDepth+`/Templates/Template_Page.html">Template Page</a>
   </div>
 </li>
-<li class="dropdown">
+/*<li class="dropdown">
   <a href="javascript:void(0)" class="dropbtn">Important Links</a>
   <div class="dropdown-content">
     <a href="https://ict.gctaa.net/sections/webdesign/students.html">Other Websites</a>
   </div>
-</li>`;
+</li>`*/;
 console.log(menuStr);
 
 var menuList = document.getElementById("menuBar");
