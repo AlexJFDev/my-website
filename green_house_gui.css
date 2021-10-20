@@ -45,7 +45,7 @@ table {
   border-spacing: 0;
   width: 100%;
   border: 4px solid #fff;
-  background-color: #cfd5ea;
+  background-color: #e9ebf5;
 }
 
 h2 {
@@ -71,7 +71,7 @@ img {
 }
 
 tr:nth-child(even) {
-  background-color: #e9ebf5;
+  background-color: #cfd5ea;
 }
 
 body {

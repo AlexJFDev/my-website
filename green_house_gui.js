@@ -13,7 +13,7 @@ var ambientCdns = {"temperature": 72, "humidity": 67}
 
 document.getElementById("growBed1").innerHTML = `<td>`+growBed1["daysSincePlanted"]+` days</td>
                                                  <td>`+growBed1["soilMoisture"]+` cb moisture</td>
-                                                 <td><img src=`+growBed1["image"]+` style="width:50px;height:50px;"></td>`;
+                                                 <td><img src=.`+growBed1["image"]+` style="width:50px;height:50px;"></td>`;
 document.getElementById("growBed2").innerHTML = `<td>`+growBed2["daysSincePlanted"]+` days</td>
                                                  <td>`+growBed2["soilMoisture"]+` cb moisture</td>
                                                  <td><img src=`+growBed2["image"]+` style="width:50px;height:50px;"></td>`;
