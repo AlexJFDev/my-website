@@ -24,6 +24,7 @@ table {
   border-spacing: 0;
   width: 100%;
   border: 1px solid #ddd;
+  background-color: #cfd5ea;
 }
 
 th, td {
@@ -37,5 +38,9 @@ img {
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #e9ebf5;
+}
+
+body {
+  background-color: #deebf7;
 }
