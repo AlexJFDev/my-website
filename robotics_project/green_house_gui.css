@@ -35,7 +35,7 @@
 .boxed {
   align: center;
   width: 500px;
-  border: 2px solid black;
+  border: 1px solid black;
   margin: 0 auto;
   background-color: #4472c4
 }
