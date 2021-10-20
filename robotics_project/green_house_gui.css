@@ -24,7 +24,6 @@
   border-top: 4px solid #fff;
   border-bottom: 4px solid #fff;
   background-color: #deebf7;
-  line-height: 30px;
 }
 
 .heading {
@@ -58,7 +57,7 @@ tr {
 }
 
 th, td {
-  padding: 8px;
+  padding: 2px;
 }
 
 th {
