@@ -31,13 +31,13 @@ document.getElementById("growBed6").innerHTML = `<td>`+growBed6["daysSincePlante
                                                  <td><img src=`+growBed6["image"]+` style="width:50px;height:50px;"></td>`;
 
 document.getElementById("hydroponic1").innerHTML = `<td>`+hydroponic1["daysSincePlanted"]+` days</td>
-                                                 <td>`+hydroponic1["soilMoisture"]+` cb moisture</td>
+                                                 <td>`+hydroponic1["nutrients"]+`</td>
                                                  <td><img src=`+hydroponic1["image"]+` style="width:50px;height:50px;"></td>`;
 document.getElementById("hydroponic2").innerHTML = `<td>`+hydroponic2["daysSincePlanted"]+` days</td>
-                                                 <td>`+hydroponic2["soilMoisture"]+` cb moisture</td>
+                                                 <td>`+hydroponic2["nutrients"]+`</td>
                                                  <td><img src=`+hydroponic2["image"]+` style="width:50px;height:50px;"></td>`;
 document.getElementById("hydroponic3").innerHTML = `<td>`+hydroponic3["daysSincePlanted"]+` days</td>
-                                                 <td>`+hydroponic3["soilMoisture"]+` cb moisture</td>
+                                                 <td>`+hydroponic3["nutrients"]+`</td>
                                                  <td><img src=`+hydroponic3["image"]+` style="width:50px;height:50px;"></td>`;
 
 document.getElementById("temperature").innerHTML = ambientCdns["temperature"]+` deg F`;
