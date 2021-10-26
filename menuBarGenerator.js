@@ -21,6 +21,12 @@ var menuStr =
   <div class="dropdown-content">
     <a href="`+directoryDepth+`/Templates/Template_Page.html">Template Page</a>
   </div>
+</li>
+<li class="dropdown">
+  <a href="javascript:void(0)" class="dropbtn">Robotics Projects</a>
+  <div class="dropdown-content">
+    <a href="`+directoryDepth+`/robotics_project/Green_House_GUI.html">Green House Project</a>
+  </div>
 </li>`;
 /*<li class="dropdown">
   <a href="javascript:void(0)" class="dropbtn">Important Links</a>
