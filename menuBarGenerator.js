@@ -31,7 +31,7 @@ var menuStr =
 <li class="dropdown">
   <a href="javascript:void(0)" class="dropbtn">Java</a>
   <div class="dropdown-content">
-    <a href="`+directoryDepth+`Java/Chap10/">Java Dates</a>
+    <a href="`+directoryDepth+`Java/Chap10/Java_Dates.html">Java Dates</a>
   </div>
 </li>`;
 console.log(menuStr);
