@@ -27,13 +27,13 @@ var menuStr =
   <div class="dropdown-content">
     <a href="`+directoryDepth+`robotics_project/Green_House_GUI.html">Green House Project</a>
   </div>
-</li>`;
-/*<li class="dropdown">
-  <a href="javascript:void(0)" class="dropbtn">Important Links</a>
+</li>
+<li class="dropdown">
+  <a href="javascript:void(0)" class="dropbtn">Java</a>
   <div class="dropdown-content">
-    <a href="https://ict.gctaa.net/sections/webdesign/students.html">Other Websites</a>
+    <a href="`+directoryDepth+`Java/Chap10/">Java Dates</a>
   </div>
-</li>*/
+</li>`;
 console.log(menuStr);
 
 var menuList = document.getElementById("menuBar");
