@@ -1,8 +1,7 @@
-print(window.location.href.replace(/[^/A]/g, ""))
 directoryDepth = "../".repeat(window.location.href.replace(/[^/A]/g, "").length-3)
 
 var menuStr =
-`<li class="dropdownButton"><a href="`+directoryDepth+`/">Home</a></li>
+`<li class="dropdownButton"><a href="`+directoryDepth+`">Home</a></li>
 <li class="dropdown">
   <a href="javascript:void(0)" class="dropbtn">GDW</a>
   <div class="dropdown-content">
