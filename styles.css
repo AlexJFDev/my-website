@@ -39,6 +39,14 @@ li.dropdown {
   z-index: 1;
 }
 
+.special-link {
+  color: white;
+  background-color: grey;
+  padding: 0px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -51,15 +59,6 @@ li.dropdown {
   color: white;
   background-color: grey;
   padding: 8px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.special-link {
-  color: white;
-  background-color: grey;
-  padding: 0px;
   text-decoration: none;
   display: block;
   text-align: left;
