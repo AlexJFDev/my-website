@@ -23,6 +23,18 @@ var menuStr =
   </div>
 </li>
 <li class="dropdown">
+  <a href="javascript:void(0)" class="dropbtn">My Repos</a>
+  <div class="dropdown-content">
+    <a href="https://github.com/likebeingawesome"><p>GitHub</p></a>
+    <a href="https://github.com/likebeingawesome/likebeingawesome.github.io">This Website</a>
+    <a href="https://github.com/likebeingawesome/Vanilla-Improvements-Agriculture">Vanilla Improvements Mod</a>
+    <a href="https://github.com/likebeingawesome/Java-Midi-Player">Java Midi Player</a>
+    <a href="https://gitlab.com/likebeingawesome"><p>GitLab</p></a>
+    <a href="https://gitlab.com/likebeingawesome/pychat-client">PyChat Client</a>
+    <a href="https://gitlab.com/likebeingawesome/pychat-server">PyChat Server</a>
+  </div>
+</li>
+<li class="dropdown">
   <a href="javascript:void(0)" class="dropbtn">Java</a>
   <div class="dropdown-content">
     <a href="`+directoryDepth+`Java/Chap10/Java_Dates.html">Java Dates</a>
