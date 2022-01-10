@@ -56,7 +56,7 @@ li.dropdown {
   text-align: left;
 }
 
-.dropdown-content a p {
+.special-link a {
   color: white;
   background-color: grey;
   padding: 0px;

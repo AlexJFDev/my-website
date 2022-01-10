@@ -25,11 +25,11 @@ var menuStr =
 <li class="dropdown">
   <a href="javascript:void(0)" class="dropbtn">My Repos</a>
   <div class="dropdown-content">
-    <a href="https://github.com/likebeingawesome"><p>GitHub</p></a>
+    <a href="https://github.com/likebeingawesome" class="special-link"><p>GitHub</p></a>
     <a href="https://github.com/likebeingawesome/likebeingawesome.github.io">This Website</a>
     <a href="https://github.com/likebeingawesome/Vanilla-Improvements-Agriculture">Vanilla Improvements Mod</a>
     <a href="https://github.com/likebeingawesome/Java-Midi-Player">Java Midi Player</a>
-    <a href="https://gitlab.com/likebeingawesome"><p>GitLab</p></a>
+    <a href="https://gitlab.com/likebeingawesome" class="special-link"><p>GitLab</p></a>
     <a href="https://gitlab.com/likebeingawesome/pychat-client">PyChat Client</a>
     <a href="https://gitlab.com/likebeingawesome/pychat-server">PyChat Server</a>
   </div>
