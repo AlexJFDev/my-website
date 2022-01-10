@@ -29,7 +29,7 @@ var menuStr =
     <a href="https://github.com/likebeingawesome/likebeingawesome.github.io">This Website</a>
     <a href="https://github.com/likebeingawesome/Vanilla-Improvements-Agriculture">Vanilla Improvements Mod</a>
     <a href="https://github.com/likebeingawesome/Java-Midi-Player">Java Midi Player</a>
-    <a href="https://gitlab.com/likebeingawesome"><p>GitLab</p></a>
+    <p><a href="https://gitlab.com/likebeingawesome">GitLab</a></p>
     <a href="https://gitlab.com/likebeingawesome/pychat-client">PyChat Client</a>
     <a href="https://gitlab.com/likebeingawesome/pychat-server">PyChat Server</a>
   </div>
