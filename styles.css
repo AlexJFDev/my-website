@@ -56,6 +56,15 @@ li.dropdown {
   text-align: left;
 }
 
+.dropdown-content a p {
+  color: white;
+  background-color: grey;
+  padding: 8px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
 .dropdown-content a:hover {background-color: #f1f1f1;}
 
 .dropdown:hover .dropdown-content {
