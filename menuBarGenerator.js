@@ -23,15 +23,16 @@ var menuStr =
   </div>
 </li>
 <li class="dropdown">
-  <a href="javascript:void(0)" class="dropbtn">Robotics Projects</a>
-  <div class="dropdown-content">
-    <a href="`+directoryDepth+`robotics_project/Green_House_GUI.html">Green House Project</a>
-  </div>
-</li>
-<li class="dropdown">
   <a href="javascript:void(0)" class="dropbtn">Java</a>
   <div class="dropdown-content">
     <a href="`+directoryDepth+`Java/Chap10/Java_Dates.html">Java Dates</a>
+    <a href="`+directoryDepth+`Java/Midi/Java_Midi_Player.html">Java Midi Player</a>
+  </div>
+</li>
+<li class="dropdown">
+  <a href="javascript:void(0)" class="dropbtn">Robotics Projects</a>
+  <div class="dropdown-content">
+    <a href="`+directoryDepth+`robotics_project/Green_House_GUI.html">Green House Project</a>
   </div>
 </li>`;
 console.log(menuStr);
