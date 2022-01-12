@@ -2,7 +2,7 @@
     font-family: courier;
   }
 
-.menu-bar--class {
+#menu-bar--id {
   list-style-type: none;
   margin: 0;
   padding: 0;
