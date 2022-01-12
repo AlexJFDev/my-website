@@ -1,8 +1,8 @@
 directoryDepth = "../".repeat(window.location.href.replace(/[^/A]/g, "").length-3)
 
 var menuStr =
-`<li class="dropdown-menu__button"><a href="`+directoryDepth+`">Home</a></li>
-<li class="dropdown">
+`<li class="menu-bar__button"><a href="`+directoryDepth+`">Home</a></li>
+<li class="menu-bar__dropdown">
   <a href="javascript:void(0)" class="dropbtn">GDW</a>
   <div class="dropdown-content">
     <p>Elements</p>
@@ -16,13 +16,13 @@ var menuStr =
     <a href="`+directoryDepth+`GDW/Unordered_Lists.html">Unordered lists</a>
   </div>
 </li>
-<li class="dropdown">
+<li class="menu-bar__dropdown">
   <a href="javascript:void(0)" class="dropbtn">Templates</a>
   <div class="dropdown-content">
     <a href="`+directoryDepth+`Templates/Template_Page.html">Template Page</a>
   </div>
 </li>
-<li class="dropdown">
+<li class="menu-bar__dropdown">
   <a href="javascript:void(0)" class="dropbtn">My Repos</a>
   <div class="dropdown-content">
     <p><a href="https://github.com/likebeingawesome">GitHub</a></p>
@@ -34,14 +34,14 @@ var menuStr =
     <a href="https://gitlab.com/likebeingawesome/pychat-server">PyChat Server</a>
   </div>
 </li>
-<li class="dropdown">
+<li class="menu-bar__dropdown">
   <a href="javascript:void(0)" class="dropbtn">Java</a>
   <div class="dropdown-content">
     <a href="`+directoryDepth+`Java/Chap10/Java_Dates.html">Java Dates</a>
     <a href="`+directoryDepth+`Java/Midi/Java_Midi_Player.html">Java Midi Player</a>
   </div>
 </li>
-<li class="dropdown">
+<li class="menu-bar__dropdown">
   <a href="javascript:void(0)" class="dropbtn">Robotics Projects</a>
   <div class="dropdown-content">
     <a href="`+directoryDepth+`robotics_project/Green_House_GUI.html">Green House Project</a>

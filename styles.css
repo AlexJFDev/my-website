@@ -10,7 +10,7 @@
   background-color: #333;
 }
 
-.dropdown-menu__button {
+.menu-bar__button {
   float: left;
 }
 
@@ -22,11 +22,11 @@ li a, .dropbtn {
   text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
+li a:hover, .menu-bar__dropdown:hover .dropbtn {
   background-color: red;
 }
 
-li.dropdown {
+li.menu-bar__dropdown {
   display: inline-block;
 }
 
@@ -67,7 +67,7 @@ li.dropdown {
 
 .dropdown-content a:hover {background-color: #f1f1f1;}
 
-.dropdown:hover .dropdown-content {
+.menu-bar__dropdown:hover .dropdown-content {
   display: block;
 }
 .blinker {
