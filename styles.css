@@ -18,12 +18,12 @@ li a, .menu-bar__dropdown__heading {
   display: inline-block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 18px 16px;
   text-decoration: none;
 }
 
 li a:hover, .menu-bar__dropdown:hover .menu-bar__dropdown__heading {
-  background-color: red;
+  background-color: #5b5bff;
 }
 
 li.menu-bar__dropdown {
@@ -39,33 +39,25 @@ li.menu-bar__dropdown {
   z-index: 1;
 }
 
-.menu-bar__dropdown__content a {
-  color: black;
-  padding: 12px 16px;
+.menu-bar__dropdown__content--link {
+  color: #000000;
+  padding: 12px 18px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
 
-.menu-bar__dropdown__content p {
-  color: white;
+.menu-bar__dropdown__content--subheading {
+  color: #ffffff;
   background-color: grey;
   padding: 8px;
+  margin: 0px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
 
-.menu-bar__dropdown__content p a {
-  color: white;
-  background-color: grey;
-  padding: 0px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.menu-bar__dropdown__content a:hover {background-color: #f1f1f1;}
+.menu-bar__dropdown__content .menu-bar__dropdown__content--link:hover {background-color: #f1f1f1;}
 
 .menu-bar__dropdown:hover .menu-bar__dropdown__content {
   display: block;
