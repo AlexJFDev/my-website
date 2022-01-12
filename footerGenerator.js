@@ -6,6 +6,6 @@ var linkStr = `<hr><br>
 <strong> CSS </strong> Valid! </a>`;
 console.log(linkStr);
 
-var footer = document.getElementById("verifFooter");
+var footer = document.getElementById("verification-footer");
 console.log(footer);
 footer.innerHTML = linkStr;
