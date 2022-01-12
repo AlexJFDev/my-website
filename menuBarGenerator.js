@@ -25,13 +25,13 @@ var menuStr =
 <li class="menu-bar__dropdown">
   <a href="javascript:void(0)" class="menu-bar__dropdown__heading">My Repos</a>
   <div class="menu-bar__dropdown__content">
-    <p><a href="https://github.com/likebeingawesome">GitHub</a></p>
-    <a href="https://github.com/likebeingawesome/likebeingawesome.github.io">This Website</a>
-    <a href="https://github.com/likebeingawesome/Vanilla-Improvements-Agriculture">Vanilla Improvements Mod</a>
-    <a href="https://github.com/likebeingawesome/Java-Midi-Player">Java Midi Player</a>
-    <p><a href="https://gitlab.com/likebeingawesome">GitLab</a></p>
-    <a href="https://gitlab.com/likebeingawesome/pychat-client">PyChat Client</a>
-    <a href="https://gitlab.com/likebeingawesome/pychat-server">PyChat Server</a>
+    <p><a href="https://github.com/likebeingawesome" target="_blank">GitHub</a></p>
+    <a href="https://github.com/likebeingawesome/likebeingawesome.github.io" target="_blank">This Website</a>
+    <a href="https://github.com/likebeingawesome/Vanilla-Improvements-Agriculture" target="_blank">Vanilla Improvements Mod</a>
+    <a href="https://github.com/likebeingawesome/Java-Midi-Player" target="_blank">Java Midi Player</a>
+    <p><a href="https://gitlab.com/likebeingawesome" target="_blank">GitLab</a></p>
+    <a href="https://gitlab.com/likebeingawesome/pychat-client" target="_blank">PyChat Client</a>
+    <a href="https://gitlab.com/likebeingawesome/pychat-server" target="_blank">PyChat Server</a>
   </div>
 </li>
 <li class="menu-bar__dropdown">
@@ -44,7 +44,7 @@ var menuStr =
 <li class="menu-bar__dropdown">
   <a href="javascript:void(0)" class="menu-bar__dropdown__heading">Robotics Projects</a>
   <div class="menu-bar__dropdown__content">
-    <a href="`+directoryDepth+`robotics_project/Green_House_GUI.html">Green House Project</a>
+    <a href="`+directoryDepth+`robotics_project/Green_House_GUI.html" target="_blank">Green House Project</a>
   </div>
 </li>`;
 console.log(menuStr);
