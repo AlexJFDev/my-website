@@ -40,7 +40,7 @@ li.menu-bar__dropdown {
 }
 
 .menu-bar__dropdown__content--link {
-  color: #000000;
+  color: #333333;
   padding: 12px 18px;
   text-decoration: none;
   display: block;
@@ -49,7 +49,7 @@ li.menu-bar__dropdown {
 
 .menu-bar__dropdown__content--subheading {
   color: #ffffff;
-  background-color: grey;
+  background-color: #808080;
   padding: 8px;
   margin: 0px;
   text-decoration: none;
@@ -57,7 +57,7 @@ li.menu-bar__dropdown {
   text-align: left;
 }
 
-.menu-bar__dropdown__content .menu-bar__dropdown__content--link:hover {background-color: #f1f1f1;}
+.menu-bar__dropdown__content .menu-bar__dropdown__content--link:hover {background-color: #a9a9ff}
 
 .menu-bar__dropdown:hover .menu-bar__dropdown__content {
   display: block;
