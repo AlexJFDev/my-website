@@ -49,6 +49,6 @@ var menuStr =
 </li>`;
 console.log(menuStr);
 
-var menuList = document.getElementById("menu-bar--id");
+var menuList = document.getElementById("menu-bar");
 console.log(menuList);
 menuList.innerHTML = menuStr;
