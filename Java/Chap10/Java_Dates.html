@@ -7,7 +7,7 @@
   </head>
   <body>
   <!-- content starts below here -->
-    <ul id="menu-bar">
+    <ul id="menu-bar"> 
     </ul>
     <h1 class="heading">This heading will be replaced</h1>
     <!-- main content starts below here -->
@@ -30,8 +30,9 @@
     System.out.println(month);
     String day = String.format("%tD", calendar);
     System.out.println(day);
-    String weekMonthDay = String.format("%tA, %<tB %<td", calendar);
-    System.out.println(weekMonthDay);</pre>
+    String weekMonthDay = String.format("%tA, %&lt;tB %&lt;td", calendar);
+    System.out.println(weekMonthDay);
+    </pre>
     <p>Gives this output:</p>
     <pre>
     Mon Nov 29 09:00:22 EST 2021
@@ -39,7 +40,8 @@
     Monday
     November
     11/29/21
-    Monday, November 29</pre>
+    Monday, November 29
+    </pre>
 
     <!-- main content ends above here -->
     <footer id="verification-footer" style="text-align: center;">

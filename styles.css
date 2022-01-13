@@ -56,7 +56,6 @@ li.menu-bar__dropdown {
   display: block;
   text-align: left;
 }
-
 a.menu-bar__dropdown__content--subheading:hover {background-color: #6666e0}
 
 .menu-bar__dropdown__content .menu-bar__dropdown__content--link:hover {background-color: #a9a9ff}
