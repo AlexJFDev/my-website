@@ -64,6 +64,15 @@ a.menu-bar__dropdown__content--subheading:hover {background-color: #6666e0}
   display: block;
 }
 
+code {
+  color: rgb(71, 255, 47);
+  background-color: gray;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid black;
+
+}
+
 .blinker {
   animation: blinker 3s linear infinite;
 }
