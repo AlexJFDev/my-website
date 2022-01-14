@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title class="heading">This title will be replaced</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../../styles.css">
   </head>
   <body>
   <!-- content starts below here -->
@@ -11,16 +11,55 @@
 
     <h1 class="heading">This heading will be replaced</h1>
     <!-- main content starts below here -->
-
+        <p>From the following incomplete code:</p>
+        <pre>
+import javax.swing.*;
+import java.awt.*;
+public class Animate {
+    int x = 1;
+    int y = 1;
+    public static void main (String[] args) {
+        Animate gui = new Animate();
+        gui.go();
+    }
+    public void go(){
+        JFrame ___________ = new JFrame();
+        frame.setDefaultCloseOperation(
+            JFrame.EXIT_ON_CLOSE);
+        ___________;
+        ___________.getContentPane().add(drawP);
+        ___________;
+        ___________.setVisible(true);
+        for (int i = 0; i < 124; ___________){
+            ___________;
+            ___________;
+            try{
+                Thread.sleep(50);
+            } catch(Exception ex) { }
+        }
+    }
+    class MyDrawP extends JPanel {
+        public void paintComponent(Graphics
+                               ___________) {
+                ___________;
+                ___________;
+                ___________;
+                ___________;
+        }
+    }
+}
+        </pre>
+        <p>Create a program that opens a new window and creates a shrinking blue square.</p>
+        <p>This was my solution:</p>
 
     <!-- main content ends above here -->
     <footer id="verification-footer" style="text-align: center;">
     </footer>
 
     <!-- Javascript imports start below here -->
-    <script src="../headingGenerator.js"></script>
-    <script src="../menuBarGenerator.js"></script>
-    <script src="../footerGenerator.js"></script>
+    <script src="../../headingGenerator.js"></script>
+    <script src="../../menuBarGenerator.js"></script>
+    <script src="../../footerGenerator.js"></script>
     <!-- Javascript imports end above here -->
   <!-- content ends above here -->
   </body>
