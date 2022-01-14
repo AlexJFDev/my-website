@@ -64,7 +64,7 @@ a.menu-bar__dropdown__content--subheading:hover {background-color: #6666e0}
   display: block;
 }
 
-pre {
+code {
   color: rgb(71, 255, 47);
   background-color: gray;
   margin: 20px;
