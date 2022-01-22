@@ -39,6 +39,7 @@ var menuStr =
     <a href="`+directoryDepth+`Java/Chap10/Java_Dates.html" class="menu-bar__dropdown__content--link">Java Dates</a>
     <a href="`+directoryDepth+`Java/Chap13/Pool_Puzzle.html" class="menu-bar__dropdown__content--link">Pool Puzzle</a>
     <a href="`+directoryDepth+`Java/Midi/Java_Midi_Player.html" class="menu-bar__dropdown__content--link">Java Midi Player</a>
+    <a href="`+directoryDepth+`Java/Midi/Java_Particle_Simulation.html" class="menu-bar__dropdown__content--link">Java Midi Player</a>
   </div>
 </li>
 <li class="menu-bar__dropdown">
