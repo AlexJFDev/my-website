@@ -25,7 +25,7 @@ var menuStr =
   <a href="javascript:void(0)" class="menu-bar__dropdown__heading">My Repos</a>
   <div class="menu-bar__dropdown__content">
     <a href="https://github.com/likebeingawesome" target="_blank" class="menu-bar__dropdown__content--subheading">GitHub</a>
-    <a href="https://github.com/likebeingawesome/likebeingawesome.github.io" target="_blank" class="menu-bar__dropdown__content--link">This Website</a>
+    <a href="https://github.com/likebeingawesome/my-website" target="_blank" class="menu-bar__dropdown__content--link">This Website</a>
     <a href="https://github.com/likebeingawesome/Vanilla-Improvements-Agriculture" target="_blank" class="menu-bar__dropdown__content--link">Vanilla Improvements Mod</a>
     <a href="https://github.com/likebeingawesome/Java-Midi-Player" target="_blank" class="menu-bar__dropdown__content--link">Java Midi Player</a>
     <a href="https://gitlab.com/likebeingawesome" target="_blank" class="menu-bar__dropdown__content--subheading">GitLab</a>
