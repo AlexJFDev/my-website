@@ -48,7 +48,8 @@ var menuStr =
   <div class="menu-bar__dropdown__content">
     <a href="`+directoryDepth+`robotics_project/Green_House_GUI.html" target="_blank" class="menu-bar__dropdown__content--link">Green House Project</a>
   </div>
-</li>`;
+</li>
+<li class="menu-bar__button"><a href="`+directoryDepth+`resume/">Resume</a></li>`;
 console.log(menuStr);
 
 var menuList = document.getElementById("menu-bar");
