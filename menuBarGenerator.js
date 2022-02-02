@@ -1,7 +1,7 @@
 directoryDepth = "../".repeat(window.location.href.replace(/[^/A]/g, "").length-3)
 
 var menuStr =
-  `<li class="menu-bar__button"><a href=/>Home</a></li>
+`<li class="menu-bar__button"><a href=/>Home</a></li>
 <li class="menu-bar__dropdown">
   <a href="javascript:void(0)" class="menu-bar__dropdown__heading">GDW</a>
   <div class="menu-bar__dropdown__content">
