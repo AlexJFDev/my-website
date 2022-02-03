@@ -14,7 +14,7 @@
   float: left;
 }
 
-.menu-bar__button a, .menu-bar__dropdown__heading {
+.menu-bar__button, .menu-bar__dropdown__heading {
   display: inline-block;
   color: white;
   text-align: center;
