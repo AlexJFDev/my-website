@@ -38,8 +38,6 @@ var menuStr =
   </div>
 </li>
 <li class="menu-bar__button"><a href="/resume/">Resume</a></li>`;
-console.log(menuStr);
 
 var menuList = document.getElementById("menu-bar");
-console.log(menuList);
 menuList.innerHTML = menuStr;
