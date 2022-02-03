@@ -1,9 +1,6 @@
 var menuStr =
 `<li class="menu-bar__button"><a href=/>Home</a></li>
 <li class="menu-bar__dropdown">
-  <a href="javascript:void(0)" class="menu-bar__dropdown__heading">GDW</a>
-</li>
-<li class="menu-bar__dropdown">
   <a href="javascript:void(0)" class="menu-bar__dropdown__heading">Templates</a>
   <div class="menu-bar__dropdown__content">
     <a href="/Templates/Template_Page.html" class="menu-bar__dropdown__content--link">Template Page</a>
