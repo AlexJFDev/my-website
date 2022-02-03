@@ -4,16 +4,6 @@ var menuStr =
 `<li class="menu-bar__button"><a href=/>Home</a></li>
 <li class="menu-bar__dropdown">
   <a href="javascript:void(0)" class="menu-bar__dropdown__heading">GDW</a>
-  <div class="menu-bar__dropdown__content">
-    <p class="menu-bar__dropdown__content--subheading">Elements</p>
-    <a href="${directoryDepth}GDW/Block_Level_Elements.html" class="menu-bar__dropdown__content--link">Block Level Elements</a>
-    <a href="${directoryDepth}GDW/Inline_Elements.html" class="menu-bar__dropdown__content--link">Inline Elements</a>
-    <a href="${directoryDepth}GDW/Object_Elements.html" class="menu-bar__dropdown__content--link">Object Elements</a>
-    <a href="${directoryDepth}GDW/Special_Characters.html" class="menu-bar__dropdown__content--link">Special Characters</a>
-    <p class="menu-bar__dropdown__content--subheading">Lists</p>
-    <a href="${directoryDepth}GDW/Ordered_Lists.html" class="menu-bar__dropdown__content--link">Ordered Lists</a>
-    <a href="${directoryDepth}GDW/Unordered_Lists.html" class="menu-bar__dropdown__content--link">Unordered lists</a>
-  </div>
 </li>
 <li class="menu-bar__dropdown">
   <a href="javascript:void(0)" class="menu-bar__dropdown__heading">Templates</a>
