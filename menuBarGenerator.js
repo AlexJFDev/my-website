@@ -1,5 +1,5 @@
 var menuStr =
-`<li class="menu-bar__button"><a href=/>Home</a></li>
+`<li class="menu-bar__button"><a href="/">Home</a></li>
 <li class="menu-bar__dropdown">
   <a href="javascript:void(0)" class="menu-bar__dropdown__heading">Templates</a>
   <div class="menu-bar__dropdown__content">
@@ -34,7 +34,6 @@ var menuStr =
     <a href="/robotics_project/Green_House_GUI.html" target="_blank" class="menu-bar__dropdown__content--link">Green House Project</a>
   </div>
 </li>
-<li class="menu-bar__button"><a href="/resume/">Resume</a></li>
 <li class="menu-bar__button"><a href="/resume/">Resume</a></li>`;
 
 var menuList = document.getElementById("menu-bar");
