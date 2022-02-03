@@ -8,7 +8,7 @@ var menuStr =
 <li class="menu-bar__dropdown">
   <a href="javascript:void(0)" class="menu-bar__dropdown__heading">Templates</a>
   <div class="menu-bar__dropdown__content">
-    <a href="${directoryDepth}Templates/Template_Page.html" class="menu-bar__dropdown__content--link">Template Page</a>
+    <a href="/Templates/Template_Page.html" class="menu-bar__dropdown__content--link">Template Page</a>
   </div>
 </li>
 <li class="menu-bar__dropdown">
@@ -27,19 +27,19 @@ var menuStr =
 <li class="menu-bar__dropdown">
   <a href="javascript:void(0)" class="menu-bar__dropdown__heading">Java</a>
   <div class="menu-bar__dropdown__content">
-    <a href="${directoryDepth}Java/Chap10/Java_Dates.html" class="menu-bar__dropdown__content--link">Java Dates</a>
-    <a href="${directoryDepth}Java/Chap13/Pool_Puzzle.html" class="menu-bar__dropdown__content--link">Pool Puzzle</a>
-    <a href="${directoryDepth}Java/Midi/Java_Midi_Player.html" class="menu-bar__dropdown__content--link">Java Midi Player</a>
-    <a href="${directoryDepth}Java/Java_Particle_Simulation.html" class="menu-bar__dropdown__content--link">Java Particle Simulation</a>
+    <a href="/Java/Chap10/Java_Dates.html" class="menu-bar__dropdown__content--link">Java Dates</a>
+    <a href="/Java/Chap13/Pool_Puzzle.html" class="menu-bar__dropdown__content--link">Pool Puzzle</a>
+    <a href="/Java/Midi/Java_Midi_Player.html" class="menu-bar__dropdown__content--link">Java Midi Player</a>
+    <a href="/Java/Java_Particle_Simulation.html" class="menu-bar__dropdown__content--link">Java Particle Simulation</a>
   </div>
 </li>
 <li class="menu-bar__dropdown">
   <a href="javascript:void(0)" class="menu-bar__dropdown__heading">Robotics Projects</a>
   <div class="menu-bar__dropdown__content">
-    <a href="${directoryDepth}robotics_project/Green_House_GUI.html" target="_blank" class="menu-bar__dropdown__content--link">Green House Project</a>
+    <a href="/robotics_project/Green_House_GUI.html" target="_blank" class="menu-bar__dropdown__content--link">Green House Project</a>
   </div>
 </li>
-<li class="menu-bar__button"><a href="${directoryDepth}resume/">Resume</a></li>`;
+<li class="menu-bar__button"><a href="/resume/">Resume</a></li>`;
 console.log(menuStr);
 
 var menuList = document.getElementById("menu-bar");
