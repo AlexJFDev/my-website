@@ -1,5 +1,3 @@
-directoryDepth = "../".repeat(window.location.href.replace(/[^/A]/g, "").length-3)
-
 var menuStr =
 `<li class="menu-bar__button"><a href=/>Home</a></li>
 <li class="menu-bar__dropdown">
