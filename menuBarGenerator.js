@@ -14,9 +14,9 @@ var menuStr =
     <a href="https://github.com/alexjfdev/Vanilla-Improvements-Agriculture" target="_blank" class="menu-bar__dropdown__content--link">Vanilla Improvements Mod</a>
     <a href="https://github.com/alexjfdev/Java-Midi-Player" target="_blank" class="menu-bar__dropdown__content--link">Java Midi Player</a>
     <a href="https://github.com/alexjfdev/midi-particles" target="_blank" class="menu-bar__dropdown__content--link">Java Particle Simulation</a>
-    <a href="https://gitlab.com/alexjfdev" target="_blank" class="menu-bar__dropdown__content--subheading">GitLab</a>
-    <a href="https://gitlab.com/alexjfdev/pychat-client" target="_blank" class="menu-bar__dropdown__content--link">PyChat Client</a>
-    <a href="https://gitlab.com/alexjfdev/pychat-server" target="_blank" class="menu-bar__dropdown__content--link">PyChat Server</a>
+    <a href="https://gitlab.com/likebeingawesome" target="_blank" class="menu-bar__dropdown__content--subheading">GitLab</a>
+    <a href="https://gitlab.com/likebeingawesome/pychat-client" target="_blank" class="menu-bar__dropdown__content--link">PyChat Client</a>
+    <a href="https://gitlab.com/likebeingawesome/pychat-server" target="_blank" class="menu-bar__dropdown__content--link">PyChat Server</a>
   </div>
 </li>
 <li class="menu-bar__dropdown">
