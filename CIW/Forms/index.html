@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title class="heading">HTML5 Forms</title>
+    <link rel="stylesheet" href="../../styles.css">
+  </head>
+  <body>
+  <!-- content starts below here -->
+    <ul id="menu-bar"></ul>
+
+    <h1 class="heading">Example Form</h1>
+    <p>This form contains most of the default HTML5 form input types.</p>
+    <!-- main content starts below here -->
+    <form action="" method="get" class="form-example">
+      <div class="form-example">
+        <label for="required">This field is required: </label>
+        <input type="text" name="required" id="required" required>
+      </div>
+      <div class="form-example">
+        <label for="optional">This field is optional: </label>
+        <input type="text" name="optional" id="optional">
+      </div>
+      <div class="form-example">
+        <label for="radio">This field is a radio button: </label>
+        <input type="radio" name="radio" id="radio">
+      </div>
+      <div class="form-example">
+        <label for="file">This field takes a file: </label>
+        <input type="file" name="file" id="file">
+      </div>
+      <div class="form-example">
+        <label for="file">This field takes an image: </label>
+        <input type="file" name="file" id="file">
+      </div>
+      <div class="form-example">
+        <label for="checkbox">This field is a checkbox: </label>
+        <input type="checkbox" name="checkbox" id="checkbox">
+      </div>
+      <div class="form-example">
+        <label for="number">This field takes a number: </label>
+        <input type="number" name="number" id="number">
+      </div>
+      <div class="form-example">
+        <label for="email">This field takes an email: </label>
+        <input type="email" name="email" id="email">
+      </div>
+      <div class="form-example">
+        <label for="range">This field is a slider: </label>
+        <input type="range" name="range" id="range">
+      </div>
+      <div class="form-example">
+        <label for="color">This field takes a color: </label>
+        <input type="color" name="color" id="color">
+      </div>
+      <div class="form-example">
+        <label for="password">This field is hidden: </label>
+        <input type="password" name="password" id="password">
+      </div>
+      <div class="form-example">
+        <input type="reset" value="Reset">
+      </div>
+      <div class="form-example">
+        <input type="button" value="This button triggers a custom event">
+      </div>
+      <div class="form-example">
+        <input type="submit" value="Submit">
+      </div>
+    </form>    
+    <!-- main content ends above here -->
+    <footer id="verification-footer" style="text-align: center;">
+    </footer>
+
+    <!-- Javascript imports start below here -->
+    <script src="../menuBarGenerator.js"></script>
+    <script src="../footerGenerator.js"></script>
+    <!-- Javascript imports end above here -->
+  <!-- content ends above here -->
+  </body>
+</html>
