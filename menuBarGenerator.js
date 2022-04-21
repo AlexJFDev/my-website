@@ -22,14 +22,14 @@ var menuStr =
 <li class="menu-bar__dropdown">
   <a href="javascript:void(0)" class="menu-bar__dropdown__heading">Schoolwork</a>
   <div class="menu-bar__dropdown__content">
-    <a href="#java" target="_blank" class="menu-bar__dropdown__content--subheading">Java</a>
+    <a href="javascript:void(0)" target="_blank" class="menu-bar__dropdown__content--subheading">Java</a>
     <a href="/Java/Chap10/Java_Dates/" class="menu-bar__dropdown__content--link">Java Dates</a>
     <a href="/Java/Chap13/Pool_Puzzle/" class="menu-bar__dropdown__content--link">Pool Puzzle</a>
     <a href="/Java/Midi/Java_Midi_Player/" class="menu-bar__dropdown__content--link">Java Midi Player</a>
     <a href="/Java/Java_Particle_Simulation/" class="menu-bar__dropdown__content--link">Java Particle Simulation</a>
-    <a href="#ciw" target="_blank" class="menu-bar__dropdown__content--subheading">CIW</a>
+    <a href="javascript:void(0)" target="_blank" class="menu-bar__dropdown__content--subheading">CIW</a>
     <a href="/CIW/Forms/" class="menu-bar__dropdown__content--link">HTML5 Forms</a>
-    <a href="#robotics" target="_blank" class="menu-bar__dropdown__content--subheading">Robotics</a>
+    <a href="javascript:void(0)" target="_blank" class="menu-bar__dropdown__content--subheading">Robotics</a>
     <a href="/robotics_project/Green_House_GUI/" target="_blank" class="menu-bar__dropdown__content--link">Green House Project</a>
   </div>
 </li>
