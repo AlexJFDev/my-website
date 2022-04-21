@@ -2,71 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title class="heading">HTML5 Forms</title>
+    <title class="heading">HTML Forms</title>
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
   <!-- content starts below here -->
     <ul id="menu-bar"></ul>
-
-    <h1 class="heading">Example Form</h1>
-    <p>This form contains most of the default HTML5 form input types.</p>
+    <h1 class="heading">HTML Forms</h1>
+    <p>
+      <!-- The line breaks are just to make this code easier to read -->
+      HTML Forms are the most basic way to add user interactivity to a website. 
+      With a backend server the data inputted into the form can be saved on a server and used. 
+      Alternatively cookies could be used to save the data locally.
+    </p>
     <!-- main content starts below here -->
-    <form action="" method="get" class="form-example">
-      <div class="form-example">
-        <label for="required">This field is required: </label>
-        <input type="text" name="required" id="required" required>
-      </div>
-      <div class="form-example">
-        <label for="optional">This field is optional: </label>
-        <input type="text" name="optional" id="optional">
-      </div>
-      <div class="form-example">
-        <label for="radio">This field is a radio button: </label>
-        <input type="radio" name="radio" id="radio">
-      </div>
-      <div class="form-example">
-        <label for="file">This field takes a file: </label>
-        <input type="file" name="file" id="file">
-      </div>
-      <div class="form-example">
-        <label for="file">This field takes an image: </label>
-        <input type="file" name="file" id="file">
-      </div>
-      <div class="form-example">
-        <label for="checkbox">This field is a checkbox: </label>
-        <input type="checkbox" name="checkbox" id="checkbox">
-      </div>
-      <div class="form-example">
-        <label for="number">This field takes a number: </label>
-        <input type="number" name="number" id="number">
-      </div>
-      <div class="form-example">
-        <label for="email">This field takes an email: </label>
-        <input type="email" name="email" id="email">
-      </div>
-      <div class="form-example">
-        <label for="range">This field is a slider: </label>
-        <input type="range" name="range" id="range">
-      </div>
-      <div class="form-example">
-        <label for="color">This field takes a color: </label>
-        <input type="color" name="color" id="color">
-      </div>
-      <div class="form-example">
-        <label for="password">This field is hidden: </label>
-        <input type="password" name="password" id="password">
-      </div>
-      <div class="form-example">
-        <input type="reset" value="Reset">
-      </div>
-      <div class="form-example">
-        <input type="button" value="This button triggers a custom event">
-      </div>
-      <div class="form-example">
-        <input type="submit" value="Submit">
-      </div>
-    </form>    
+    <h2>Original Input Types</h2>
+    <p>This form contains all the original html form inputs.</p>
+    <form action="" method="get" class="form-example__original-inputs">
+      <label for="reset-button">This is a reset button</label>
+      <input type="reset" name="reset-button" id="reset-button">
+      <br> 
+      <label for="text-input">This field takes any text input:</label>
+      <input type="text" name="text-input" id="text-input">
+      <br>
+      <label for="required-input">This field is required</label>
+      <input type="text" name="required-input" id="required-input">
+      <br>
+      <label for="password-input">This data input into this field is hidden:</label>
+      <input type="password" name="password-input" id="password-input">
+      <br>
+      <label for="radio-button">These are radio buttons:</label>
+      <input type="radio" name="radio-button" id="radio-button">
+      <input type="radio" name="radio-button" id="radio-button">
+      <input type="radio" name="radio-button" id="radio-button">
+      <input type="radio" name="radio-button" id="radio-button">
+      <br>
+      <label for="checkbox-button">These are checkboxes:</label>
+      <input type="checkbox" name="checkbox-button" id="checkbox-button">
+      <input type="checkbox" name="checkbox-button" id="checkbox-button">
+      <input type="checkbox" name="checkbox-button" id="checkbox-button">
+      <input type="checkbox" name="checkbox-button" id="checkbox-button">
+      <br>
+      <label for="file-input">This is a file input:</label>
+      <input type="file" name="file-input" id="file-input">
+      <br>
+      <label for="event-button">This button is an event trigger:</label>
+      <input type="button" name="event-button" id="event-button">
+      <br>
+      <label for="submit-button">This is a submit button:</label>
+      <input type="submit" name="submit-button" id="submit-button">
+    </form>
     <!-- main content ends above here -->
     <footer id="verification-footer" style="text-align: center;">
     </footer>
