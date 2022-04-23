@@ -33,7 +33,6 @@ var menuStr =
     <a href="/robotics_project/Green_House_GUI/" target="_blank" class="menu-bar__dropdown__content--link">Green House Project</a>
   </div>
 </li>
-<li class="menu-bar__button"><a href="/resume/">Resume</a></li>
 <li class="menu-bar__button"><a href="/examples/">Apache Tomcat!</a></li>`;
 
 var menuList = document.getElementById("menu-bar");
