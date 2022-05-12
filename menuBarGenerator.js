@@ -11,6 +11,7 @@ var menuStr =
   <div class="menu-bar__dropdown__content">
     <a href="https://github.com/alexjfdev" target="_blank" class="menu-bar__dropdown__content--subheading">GitHub</a>
     <a href="https://github.com/alexjfdev/my-website" target="_blank" class="menu-bar__dropdown__content--link">This Website</a>
+    <a href="https://github.com/alexjfdev/Java-Algebra-System" target="_blank" class="menu-bar__dropdown__content--link">Java Algebra System</a>
     <a href="https://github.com/alexjfdev/Vanilla-Improvements-Agriculture" target="_blank" class="menu-bar__dropdown__content--link">Vanilla Improvements Mod</a>
     <a href="https://github.com/alexjfdev/Java-Midi-Player" target="_blank" class="menu-bar__dropdown__content--link">Java Midi Player</a>
     <a href="https://github.com/alexjfdev/midi-particles" target="_blank" class="menu-bar__dropdown__content--link">Java Particle Simulation</a>
