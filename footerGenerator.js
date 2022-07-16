@@ -7,5 +7,4 @@ var linkStr = `<hr><br>
 console.log(linkStr);
 
 var footer = document.getElementById("verification-footer");
-console.log(footer);
 footer.innerHTML = linkStr;

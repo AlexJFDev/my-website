@@ -1,6 +1,7 @@
 * {
     font-family: courier;
 }
+
 #sidebar {
     height: 100%;
     width: 20%;
@@ -10,19 +11,60 @@
     left: 0;
     background-color: #333333;
     overflow-x: hidden;
-    padding-top: 20px;
+    padding-top: 10px;
 }
-#sidebar a.link {
-    padding: 6px 8px 6px 16px;
+
+#sidebar .heading {
+    padding: 6% 8% 3% 8%;
+    margin: 0% 0% 0% 0%;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 200%;
     color: #818181;
     display: block;
-} 
+}
+
+#sidebar ul  {
+    list-style-type: none;
+    padding: 0% 0% 0% 0%;
+    margin: 0% 0% 0% 0%;
+}
+
+#sidebar li a {
+    padding: 0% 8% 0% 18%;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 120%;
+    color: #818181;
+    display: block;
+}
+
 #sidebar a:hover {
     color: #f1f1f1;
 }
 
 #main-content {
-    margin-left: 20%;
+    margin-left: 22%;
+    margin-top: 5%;
+}
+
+#date {
+    height: 5%;
+    width: 75%;
+    position: fixed;
+    text-align: right;
+    z-index: 2;
+    top: 0;
+    left: 25%;
+    overflow-y: hidden;
+}
+
+#date p {
+    padding: 1% 5% 0% 5%;
+    margin: 0% 0% 0% 0%;
+}
+
+footer {
+    font-size: 80%;
+    margin-left: 22%;
+    margin-top: 5%;
 }

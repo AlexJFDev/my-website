@@ -1,12 +1,6 @@
 var menuStr =
 `<li class="menu-bar__button"><a href="/">Home</a></li>
 <li class="menu-bar__dropdown">
-  <a href="javascript:void(0)" class="menu-bar__dropdown__heading">Templates</a>
-  <div class="menu-bar__dropdown__content">
-    <a href="/Templates/Template_Page/" class="menu-bar__dropdown__content--link">Template Page</a>
-  </div>
-</li>
-<li class="menu-bar__dropdown">
   <a href="javascript:void(0)" class="menu-bar__dropdown__heading">My Repos</a>
   <div class="menu-bar__dropdown__content">
     <a href="https://github.com/alexjfdev" target="_blank" class="menu-bar__dropdown__content--subheading">GitHub</a>
@@ -34,7 +28,7 @@ var menuStr =
     <a href="/robotics_project/Green_House_GUI/" target="_blank" class="menu-bar__dropdown__content--link">Green House Project</a>
   </div>
 </li>
-<li class="menu-bar__button"><a href="/examples/">Apache Tomcat!</a></li>`;
+<li class="menu-bar__button"><a href="/blog/">My Blog</a></li>`;
 
 var menuList = document.getElementById("menu-bar");
 menuList.innerHTML = menuStr;
