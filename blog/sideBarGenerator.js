@@ -5,7 +5,7 @@ var sideBarString =
 <div id="csc205">
   <p class="heading">CSC 205</p>
   <ul>
-    <li><a href="/blog/csc205/the_octal_and_hexidecimal_number_systems">The Octal and Hexidecimal Number Systems</a></li>
+    <li><a href="/blog/csc205/the_octal_and_hexidecimal_number_systems">Octal and Hexidecimal Numbers</a></li>
   </ul>
 </div>
 <div id ="modding">
