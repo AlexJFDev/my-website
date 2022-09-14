@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title class="heading">The Octal and Hexidecimal Number Systems</title>
+    <link rel="stylesheet" href="/blog/styles.css">
+  </head>
+  <body>
+  <!-- content starts below here -->
+    <div id="sidebar"></div>
+    <div id="date"><p>9/14/2022</p></div>
+    <div id="main-content">
+        <h1 class="heading">My Altair Compiler</h1>
+        <!-- main content starts below here -->
+        <h2>Basic Info</h2>
+        <p>This post is about <a href="https://github.com/AlexJFDev/altair-compiler">one of my github projects</a>.</p>
+        <p>After being introduced to the Altair and writting bytecode for it I was interested in writting a compiler to make writting code faster. I chose to write the compiler in Python.</p>
+        <p>The Compiler takes text files as input and outputs binary files. I like to give the input files the extension .alt but you don't have to. The programs use the mnemonics found in the manual for instructions. Arguments for instructions are seperated by commas. If the arguments will go bytes seperate from the instruction they are in Hex otherwise they are binary. The MOV instruction is different from any other and uses a,b,c,d,e,h,l for arguments. Lastly, dat is a special instruction used for data. Dat takes any number of hex arguments.</p>
+        <h2>Technical details</h2>
+        <p>The compiler reads input files one line at a time and one instruction is allowed per line. It starts by finding the instruction name, which should be at the start, and then looks that instruction up in a dictionary (hash table). If the instruction isn't found an error is thrown and the program stops. After this the arguments are found and then passed into a method for the instruction to generate its bytecode. When complation is finished all the bytes are saved into an output file.</p>
+        <!-- main content ends above here -->
+    </div>
+    <!-- main content ends above here -->
+    <footer id="verification-footer" style="text-align: center;"></footer>
+    <!-- Javascript imports start below here -->
+    <script src="/blog/sideBarGenerator.js"></script>
+    <script src="/footerGenerator.js"></script>
+    <!-- Javascript imports end above here -->
+  <!-- content ends above here -->
+  </body>
+</html>
