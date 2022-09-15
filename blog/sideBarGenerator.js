@@ -6,7 +6,7 @@ var sideBarString =
   <p class="heading">CSC 205</p>
   <ul>
     <li><a href="/blog/csc205/the_octal_and_hexidecimal_number_systems">Octal and Hexidecimal Numbers</a></li>
-    <li><a href="/blog/csc205/altair_compiler">My Altair-8800 Compiler</a></li>
+    <li><a href="/blog/csc205/altair_assembler">My Altair-8800 Assembler</a></li>
     </ul>
 </div>
 <div id ="modding">
