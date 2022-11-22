@@ -68,24 +68,6 @@ a.menu-bar__dropdown__content--subheading:hover {
   display: block;
 }
 
-code {
-  color: rgb(71, 255, 47);
-  background-color: gray;
-  margin: 20px;
-  padding: 10px;
-  border: 1px solid black;
-  font-family: monospace;
-}
-
-pre {
-  color: rgb(71, 255, 47);
-  background-color: gray;
-  margin: 20px;
-  padding: 10px;
-  border: 1px solid black;
-  font-family: monospace;
-}
-
 .blinker {
   animation: blinker 3s linear infinite;
 }

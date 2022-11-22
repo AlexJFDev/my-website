@@ -24,8 +24,6 @@ var menuStr =
     <a href="/Java/Java_Particle_Simulation/" class="menu-bar__dropdown__content--link">Java Particle Simulation</a>
     <a href="javascript:void(0)" class="menu-bar__dropdown__content--subheading">CIW</a>
     <a href="/CIW/Forms/" class="menu-bar__dropdown__content--link">HTML5 Forms</a>
-    <a href="javascript:void(0)" class="menu-bar__dropdown__content--subheading">Robotics</a>
-    <a href="/robotics_project/Green_House_GUI/" target="_blank" class="menu-bar__dropdown__content--link">Green House Project</a>
   </div>
 </li>
 <li class="menu-bar__button"><a href="/blog/">My Blog</a></li>`;
