@@ -14,11 +14,11 @@
     <div id="sidebar"></div>
     <div id="date"><p>9/1/2022</p></div>
     <div id="main-content">
-        <h1 class="heading">Finding Anagrams</h1>
+        <h1 class="heading">Anagram Algorithms</h1>
         <!-- main content starts below here -->
         <p>In CSC-205 one of the things we will be doing is working on <a href="https://github.com/AllenDowney/DSIRP">DSIRP</a>. Its a course designed to teach about algorithms and data structures in Python.</p>
         <p> Our first assignment was to work on <a href="https://github.com/AllenDowney/DSIRP/blob/main/notebooks/algorithms.ipynb">algorithms</a> which teaches basic algorithm concepts. Its first task is to find if two words are anagrams.</p>
-        <h2>My First Aproach</h2>
+        <h2>My First Approach</h2>
         <pre><code>
           def is_anagram_old(word1, word2):
             # `word1` is a string.
@@ -41,8 +41,8 @@
             # Return False
             return True
         </code></pre>
-        <p>This first method takes a more convential aproach using dictionaries.</p>
-        <h3>My Second Aproach</h3>
+        <p>This first method takes a more conventional approach using dictionaries.</p>
+        <h3>My Second Approach</h3>
         <pre><code>
           def factorize_word(word, letter_dictionary): 
             # `word` is just a string. 
@@ -67,8 +67,8 @@
             # Return True
             return True
         </code></pre>
-        <p>This method is less convential but it seems to be slightly faster.</p>
-        <p>I call this method "factorizing". Every letter is associated with a differnt prime number ({"a":2,"b":3,"c":5,...}). The algorithm finds all the prime numbers of a word and multiplys them together. Anagrams will always have the same prime numbers and therfore the same product.</p>
+        <p>This method is less conventional but it seems to be slightly faster.</p>
+        <p>I call this method "factorizing". Every letter is associated with a different prime number ({"a":2,"b":3,"c":5,...}). The algorithm finds all the prime numbers of a word and multiplys them together. Anagrams will always have the same prime numbers and therfore the same product.</p>
         <p>This method works because each number has a unique set of prime factors.</p>
         <!-- main content ends above here -->
     </div>
