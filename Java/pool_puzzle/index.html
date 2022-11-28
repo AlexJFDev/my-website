@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head></head>
+  <head>
     <meta charset="utf-8">
-    <title class="heading">Chapter 13 Pool Puzzle</title>
+    <title class="heading">Java Dates</title>
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
@@ -11,50 +11,49 @@
   </head>
   <body>
   <!-- content starts below here -->
-    <ul id="menu-bar"></ul>
-
-    <h1 class="heading">Chapter 13 Pool Puzzle</h1>
+    <div id="sidebar"></div>
+    <div id="date"><p>4/19/2022</p></div>
+    <div id="main-content">
     <!-- main content starts below here -->
+        <h1 class="heading">Pool Puzzle</h1>
         <p>From the following incomplete code:</p>
         <pre><code>
 import javax.swing.*;
 import java.awt.*;
 public class Animate {
-    int x = 1;
-    int y = 1;
-    public static void main (String[] args) {
-        Animate gui = new Animate();
-        gui.go();
-    }
-    public void go(){
-        JFrame ___________ = new JFrame();
-        frame.setDefaultCloseOperation(
-            JFrame.EXIT_ON_CLOSE);
+int x = 1;
+int y = 1;
+public static void main (String[] args) {
+    Animate gui = new Animate();
+    gui.go();
+}
+public void go(){
+    JFrame ___________ = new JFrame();
+    frame.setDefaultCloseOperation(
+        JFrame.EXIT_ON_CLOSE);
+    ___________;
+    ___________.getContentPane().add(drawP);
+    ___________;
+    ___________.setVisible(true);
+    for (int i = 0; i < 124; ___________){
         ___________;
-        ___________.getContentPane().add(drawP);
         ___________;
-        ___________.setVisible(true);
-        for (int i = 0; i < 124; ___________){
-            ___________;
-            ___________;
-            try{
-                Thread.sleep(50);
-            } catch(Exception ex) { }
-        }
-    }
-    class MyDrawP extends JPanel {
-        public void paintComponent(Graphics
-                            ___________) {
-                ___________;
-                ___________;
-                ___________;
-                ___________;
-        }
+        try{
+            Thread.sleep(50);
+        } catch(Exception ex) { }
     }
 }
+class MyDrawP extends JPanel {
+    public void paintComponent(Graphics
+                        ___________) {
+            ___________;
+            ___________;
+            ___________;
+            ___________;
+    }
+}
+}
         <de></pre>
-
-       
         <p>Create a program that opens a new window and creates a shrinking blue square.</p>
         <p>This was my solution:</p>
         <pre><code>
@@ -92,14 +91,12 @@ public class Animate {
         }
     }
 }
-    </code></pre>
-
-    <!-- main content ends above here -->
-    <footer id="verification-footer" style="text-align: center;">
-    </footer>
-
+        </code></pre>
+	<!-- main content ends above here -->
+    </div>
+    <footer id="verification-footer" style="text-align: center;"></footer>
     <!-- Javascript imports start below here -->
-    <script src="/menuBarGenerator.js"></script>
+    <script src="/sideBarGenerator.js"></script>
     <script src="/footerGenerator.js"></script>
     <!-- Javascript imports end above here -->
   <!-- content ends above here -->

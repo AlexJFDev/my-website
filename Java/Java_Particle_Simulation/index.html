@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
     <meta charset="utf-8">
     <title class="heading">Java Particle Simulation</title>
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
   <!-- content starts below here -->
-    <ul id="menu-bar"></ul>
-
-    <h1 class="heading">Java Particle Simulation</h1>
+    <div id="sidebar"></div>
+    <div id="date"><p>4/29/2022</p></div>
+    <div id="main-content">
     <!-- main content starts below here -->
-    <a href="/files/java-physics-simulator.jar" download><h2>Download</h2></a>
-    <a href="/files/particleRow.ser">Sample File</a>
-    <p>This is a Java program that simulates a lot of particles simultaneously.<br>The particles bounce off of the wall and each other and a hash table is used for collisions.<br>It isn't perfect though and still needs some work.</p>
-    <p>If the file doesn't work due to "unidentified developer" on a MacOS you can run:</p><code>xattr -c java-physics-simulator.jar</code><p></p>and it will be capable of running.</p>
-    <p>Lastly it may not work properly if you are not up to date with <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">Java version 17</a>.</p>
-    <p>You can now load and save the state of the simulation with serialized files. I've given a sample file called particleRow.ser to try. ".ser" is the standard ending for serialized Java files but you can use any ending you'd like or none at all.</p>
-    <!-- main content ends above here -->
-    <footer id="verification-footer" style="text-align: center;">
-    </footer>
-
+      <h1 class="heading">Java Particle Simulation</h1>
+      <a href="/files/java-physics-simulator.jar" download><h2>Download</h2></a>
+      <a href="/files/particleRow.ser">Sample File</a>
+      <p>This is a Java program that simulates a lot of particles simultaneously.<br>The particles bounce off of the wall and each other and a hash table is used for collisions.<br>It isn't perfect though and still needs some work.</p>
+      <p>If the file doesn't work due to "unidentified developer" on a MacOS you can run:</p><code>xattr -c java-physics-simulator.jar</code><p></p>and it will be capable of running.</p>
+      <p>Lastly it may not work properly if you are not up to date with <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">Java version 17</a>.</p>
+      <p>You can now load and save the state of the simulation with serialized files. I've given a sample file called particleRow.ser to try. ".ser" is the standard ending for serialized Java files but you can use any ending you'd like or none at all.</p>
+	  <!-- main content ends above here -->
+    </div>
+    <footer id="verification-footer" style="text-align: center;"></footer>
     <!-- Javascript imports start below here -->
-    <script src="/menuBarGenerator.js"></script>
+    <script src="/sideBarGenerator.js"></script>
     <script src="/footerGenerator.js"></script>
     <!-- Javascript imports end above here -->
   <!-- content ends above here -->
