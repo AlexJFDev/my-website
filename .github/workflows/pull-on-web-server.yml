@@ -12,5 +12,5 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        passphrase: ${{ secrets.PASSPHRASE}}
+        key: ${{ secrets.KEY}}
         script: whoami
