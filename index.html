@@ -4,22 +4,30 @@
     <meta charset="utf-8">
     <title class="heading">Blog Homepage</title>
     <link rel="stylesheet" href="/styles.css">
+    <script>
+      let side_bar_open = false;
+
+      function activateSideBar(){
+        if (side_bar_open) {
+          document.getElementById("left-sidebar").style.left = "-15%";
+          side_bar_open = false;
+        } else {
+          document.getElementById("left-sidebar").style.left = "0%";
+          side_bar_open = true;
+        }
+      }
+    </script>
   </head>
   <body>
-  <!-- content starts below here -->
-    <div id="sidebar"></div>
-    <div id="main-content">
-        <!-- main content starts below here -->
-        <h1 class="heading">Welcome to my blog!</h1>
-        <p>Welcome to my website! It's being hosted with Apache on a Raspberry PI.</p>
-        <!-- main content ends above here -->
+    <div id="left-sidebar">
+        <div id="left-sidebar_button" onclick="activateSideBar()">>>></div>
+        <div id="left-sidebar_menu"></div>
     </div>
-    <!-- main content ends above here -->
+    <main>
+      <h1 class="heading">Welcome to my blog!</h1>
+      <p>Welcome to my website! It's being hosted with Apache on a Raspberry PI.</p>
+    </main>
     <footer id="verification-footer" style="text-align: center;"></footer>
-    <!-- Javascript imports start below here -->
-    <script src="/sideBarGenerator.js"></script>
     <script src="/footerGenerator.js"></script>
-    <!-- Javascript imports end above here -->
-  <!-- content ends above here -->
   </body>
 </html>
