@@ -15,3 +15,5 @@ jobs:
         script: |
           cd my-website
           git pull
+          rm -rf /var/www/html
+          cp -rT ~/my-website /var/www/html
