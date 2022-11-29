@@ -1,0 +1,60 @@
+* {
+    font-family: courier;
+}
+
+#sidebar {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0%;
+    left: -15%;
+    background-color: #333;
+    overflow-x: hidden;
+    padding-top: 10px;
+}
+
+#sidebar #sidebar_button {
+    position: absolute;
+
+    aspect-ratio: 1 / 1;
+    width: 10%;
+
+    text-align: center;
+    right: 7.5%;
+
+    font-size: 1.5vw;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+main {
+    height: 80%;
+    width: 90%;
+    right: 2.5%;
+    top: 10%;
+    position: fixed;
+}
+
+footer {
+    height: 10%;
+    width: 90%;
+    right: 2.5%;
+    top: 90%;
+    font-size: 80%;
+    position: fixed;
+}
+
+#date {
+    height: 5%;
+    width: 100%;
+    text-align: right;
+    z-index: 2;
+    top: 0;
+    left: 25%;
+    overflow-y: hidden;
+}
+
+#date p {
+    padding: 1% 5% 0% 5%;
+    margin: 0% 0% 0% 0%;
+}
