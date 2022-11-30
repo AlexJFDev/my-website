@@ -31,8 +31,12 @@
 
       function setActiveMenu(menu){
         let sortButtons = document.getElementsByClassName("sort-button");
-        sortButtons.forEach(element => element.className = "sort-button");
-        document.getElementById(`${menu}-button`).className = "sort-button selected-button";
+        for (let element of sortButtons) element.style.backgroundColor = "var(--left-sidebar_text-color)";
+        document.getElementById(`${menu}-button`).style.backgroundColor = "var(--left-sidebar_selection-color)";
+
+        let navigationMenus = document.getElementsByClassName("navigation-menu");
+        for (let element of navigationMenus) element.style.visibility = "hidden";
+        document.getElementById(`navigation-menu_${menu}`).style.visibility = "visible";
       }
     </script>
   </head>
@@ -43,10 +47,10 @@
         <div class="sort-button" id="date-button" onclick="setActiveMenu('date')">Date</div>
         <div class="sort-button" id="topic-button" onclick="setActiveMenu('topic')">Topic</div>
         <hr>
-        <div id="navigation-menu_date">
+        <div class="navigation-menu" id="navigation-menu_date">
 
         </div>
-        <div id="navigation-menu_type">
+        <div class="navigation-menu" id="navigation-menu_topic">
 
         </div>
       </div>

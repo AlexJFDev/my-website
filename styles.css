@@ -23,17 +23,17 @@
 
 #left-sidebar_button {
     position: absolute;
-    right: 7.5%;
+    right: 0%;
     top: 2.5%;
-    aspect-ratio: 1 / 1;
-    height: 5%;
-    font-size: 2vh;
+    width: 20%;
     cursor: pointer;
+    
+    border: 1px solid red;
 }
 
 #left-sidebar_button p{
     text-align: center;
-    font-size: 2vh;
+    font-size: 100%;
 }
 
 #left-sidebar_contents {
@@ -48,14 +48,14 @@
 }
 
 .sort-button {
-    aspect-ratio: 3 / 1;
     width: 45%;
     border-radius: 15%;
     background-color: var(--left-sidebar_text-color);
     text-align: center;
     margin: 0 auto;
     color: var(--left-sidebar_background-color);
-    font-size: 2.6vw;
+    font-size: 150%;
+    border: 1px solid red;
 }
 
 #date-button {
@@ -69,15 +69,28 @@
     left: 52.5%;
 }
 
-.selected-button {
-    background-color: var(--left-sidebar_selection-color);
-}
-
 #left-sidebar_contents hr {
     position: absolute;
     top: 2.5%;
     width: 96%;
 }
+
+.navigation-menu {
+    visibility: hidden;
+    position: absolute;
+    height: 95%;
+    width: 90%;
+    top: 5%;
+    left: 5%;
+    border: 1px solid red;
+}
+
+/*Delete Me*/
+#navigation-menu_topic {
+    border: 1px solid green;
+}
+
+
 
 #main-section {
     position: fixed;
