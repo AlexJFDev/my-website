@@ -23,6 +23,16 @@
 
 #left-sidebar_button {
     position: absolute;
+    right: 100%;
+    top: 2.5%;
+    width: 20%;
+    cursor: pointer;
+    
+    border: 1px solid red;
+}
+
+#left-sidebar button {
+    position: absolute;
     right: 0%;
     top: 2.5%;
     width: 20%;

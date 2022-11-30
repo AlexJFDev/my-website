@@ -13,7 +13,8 @@
           left_side_bar_open = false;
           document.getElementById("left-sidebar").style.left = "-15%";
           document.getElementById("left-sidebar_contents").style.visibility = "hidden";
-          document.getElementById("left-sidebar_button").innerHTML = "<p>>>></p>"
+          document.getElementById("left-sidebar").getElementsByTagName("button")[0].innerHTML = ">>>";
+          document.getElementById("left-sidebar_button").innerHTML = "<p>>>></p>";
           document.getElementById("header-section").style.width = "90%";
           document.getElementById("main-section").style.width = "90%";
           document.getElementById("footer-section").style.width = "90%";
@@ -22,7 +23,8 @@
           left_side_bar_open = true;
           document.getElementById("left-sidebar").style.left = "0%";
           document.getElementById("left-sidebar_contents").style.visibility = "visible";
-          document.getElementById("left-sidebar_button").innerHTML = "<p><<<</p>"
+          document.getElementById("left-sidebar").getElementsByTagName("button")[0].innerHTML = "<<<";
+          document.getElementById("left-sidebar_button").innerHTML = "<p><<<</p>";
           document.getElementById("header-section").style.width = "75%";
           document.getElementById("main-section").style.width = "75%";
           document.getElementById("footer-section").style.width = "75%";
@@ -42,13 +44,16 @@
   </head>
   <body>
     <div id="left-sidebar">
+      <button onclick="activateSideBar()">>>></button>
       <div id="left-sidebar_button" onclick="activateSideBar()"><p>>>></p></div>
       <div id="left-sidebar_contents">
         <div class="sort-button" id="date-button" onclick="setActiveMenu('date')">Date</div>
         <div class="sort-button" id="topic-button" onclick="setActiveMenu('topic')">Topic</div>
         <hr>
         <div class="navigation-menu" id="navigation-menu_date">
+          <div>
 
+          </div>
         </div>
         <div class="navigation-menu" id="navigation-menu_topic">
 
