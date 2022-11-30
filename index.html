@@ -5,29 +5,54 @@
     <title class="heading">Blog Homepage</title>
     <link rel="stylesheet" href="/styles.css">
     <script>
-      let side_bar_open = false;
+      let left_side_bar_open = false;
 
       function activateSideBar(){
-        if (side_bar_open) {
+        if (left_side_bar_open) {
+          left_side_bar_open = false;
           document.getElementById("left-sidebar").style.left = "-15%";
-          side_bar_open = false;
+          document.getElementById("left-sidebar_contents").style.visibility = "hidden";
+          document.getElementById("left-sidebar_button").innerHTML = "<p>>>></p>"
+          document.getElementById("header-section").style.width = "90%";
+          document.getElementById("main-section").style.width = "90%";
+          document.getElementById("footer-section").style.width = "90%";
         } else {
+          left_side_bar_open = true;
           document.getElementById("left-sidebar").style.left = "0%";
-          side_bar_open = true;
+          document.getElementById("left-sidebar_contents").style.visibility = "visible";
+          document.getElementById("left-sidebar_button").innerHTML = "<p><<<</p>"
+          document.getElementById("header-section").style.width = "75%";
+          document.getElementById("main-section").style.width = "75%";
+          document.getElementById("footer-section").style.width = "75%";
         }
+      }
+
+      function setActiveMenu(menu){
+        document.getElementById(`${menu}-button`).className = "sort-button selected-button";
       }
     </script>
   </head>
   <body>
     <div id="left-sidebar">
-        <div id="left-sidebar_button" onclick="activateSideBar()">>>></div>
-        <div id="left-sidebar_menu"></div>
+      <div id="left-sidebar_button" onclick="activateSideBar()"><p>>>></p></div>
+      <div id="left-sidebar_contents">
+        <div class="sort-button selected-button" id="date-button" onclick="setActiveMenu('date')">Date</div>
+        <div class="sort-button" id="topic-button" onclick="setActiveMenu('topic')">Topic</div>
+        <hr>
+        <div id="navigation-menu_date">
+
+        </div>
+        <div id="navigation-menu_type">
+
+        </div>
+      </div>
     </div>
-    <main>
+    <div id="header-section"></div>
+    <div id="main-section">
       <h1 class="heading">Welcome to my blog!</h1>
       <p>Welcome to my website! It's being hosted with Apache on a Raspberry PI.</p>
-    </main>
-    <footer id="verification-footer" style="text-align: center;"></footer>
+    </div>
+    <div id="footer-section" style="text-align: center;"></div>
     <script src="/footerGenerator.js"></script>
   </body>
 </html>

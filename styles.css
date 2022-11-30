@@ -1,3 +1,9 @@
+:root {
+    --left-sidebar_background-color: rgb(33, 33, 33);
+    --left-sidebar_text-color: rgb(175, 175, 175);
+    --left-sidebar_selection-color: rgb(255, 255, 255);
+}
+
 * {
     font-family: courier;
 }
@@ -9,39 +15,94 @@
     z-index: 1;
     top: 0%;
     left: -15%;
-    background-color: #333;
+    background-color: var(--left-sidebar_background-color);
     overflow-x: hidden;
     padding-top: 10px;
+    color: var(--left-sidebar_text-color);
 }
 
-#left-sidebar #left-sidebar_button {
+#left-sidebar_button {
     position: absolute;
-
-    aspect-ratio: 1 / 1;
-    width: 10%;
-
-    text-align: center;
     right: 7.5%;
-
-    font-size: 1.5vw;
-    color: rgba(255, 255, 255, 0.8);
+    top: 2.5%;
+    aspect-ratio: 1 / 1;
+    height: 5%;
+    font-size: 2vh;
+    cursor: pointer;
 }
 
-main {
+#left-sidebar_button p{
+    text-align: center;
+    font-size: 2vh;
+}
+
+#left-sidebar_contents {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    visibility: hidden;
+
+    border: 1px solid red;
+}
+
+.sort-button {
+    aspect-ratio: 3 / 1;
+    width: 45%;
+    border-radius: 15%;
+    background-color: var(--left-sidebar_text-color);
+    text-align: center;
+    margin: 0 auto;
+    color: var(--left-sidebar_background-color);
+    font-size: 2.6vw;
+}
+
+#date-button {
+    position: absolute;
+    left: 2.5%;
+}
+
+#topic-button {
+    position: absolute;
+    top: 0%;
+    left: 52.5%;
+}
+
+.selected-button {
+    background-color: var(--left-sidebar_selection-color);
+}
+
+#left-sidebar_contents hr {
+    position: absolute;
+    top: 2.5%;
+    width: 96%;
+}
+
+#main-section {
+    position: fixed;
+    top: 10%;
+    right: 2.5%;
     height: 80%;
     width: 90%;
-    right: 2.5%;
-    top: 10%;
-    position: fixed;
 }
 
-footer {
+#footer-section {
+    position: fixed;
     height: 10%;
     width: 90%;
     right: 2.5%;
     top: 90%;
     font-size: 80%;
+}
+
+#header-section {
     position: fixed;
+    height: 10%;
+    width: 90%;
+    right: 2.5%;
+    top: 0%;
+    font-size: 80%;
 }
 
 #date {
