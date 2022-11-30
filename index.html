@@ -9,6 +9,7 @@
 
       function activateSideBar(){
         if (left_side_bar_open) {
+          // If the sidebar is open close it.
           left_side_bar_open = false;
           document.getElementById("left-sidebar").style.left = "-15%";
           document.getElementById("left-sidebar_contents").style.visibility = "hidden";
@@ -17,6 +18,7 @@
           document.getElementById("main-section").style.width = "90%";
           document.getElementById("footer-section").style.width = "90%";
         } else {
+          // otherwise, open it!
           left_side_bar_open = true;
           document.getElementById("left-sidebar").style.left = "0%";
           document.getElementById("left-sidebar_contents").style.visibility = "visible";
@@ -28,6 +30,8 @@
       }
 
       function setActiveMenu(menu){
+        let sortButtons = document.getElementsByClassName("sort-button");
+        sortButtons.forEach(element => element.className = "sort-button");
         document.getElementById(`${menu}-button`).className = "sort-button selected-button";
       }
     </script>
@@ -36,7 +40,7 @@
     <div id="left-sidebar">
       <div id="left-sidebar_button" onclick="activateSideBar()"><p>>>></p></div>
       <div id="left-sidebar_contents">
-        <div class="sort-button selected-button" id="date-button" onclick="setActiveMenu('date')">Date</div>
+        <div class="sort-button" id="date-button" onclick="setActiveMenu('date')">Date</div>
         <div class="sort-button" id="topic-button" onclick="setActiveMenu('topic')">Topic</div>
         <hr>
         <div id="navigation-menu_date">
