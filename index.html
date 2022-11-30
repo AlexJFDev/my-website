@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title class="heading">Blog Homepage</title>
     <link rel="stylesheet" href="/styles.css">
+    <!--Should be /styles.css-->
     <script>
       let left_side_bar_open = false;
 
@@ -14,7 +15,6 @@
           document.getElementById("left-sidebar").style.left = "-15%";
           document.getElementById("left-sidebar_contents").style.visibility = "hidden";
           document.getElementById("left-sidebar").getElementsByTagName("button")[0].innerHTML = ">>>";
-          document.getElementById("left-sidebar_button").innerHTML = "<p>>>></p>";
           document.getElementById("header-section").style.width = "90%";
           document.getElementById("main-section").style.width = "90%";
           document.getElementById("footer-section").style.width = "90%";
@@ -24,7 +24,6 @@
           document.getElementById("left-sidebar").style.left = "0%";
           document.getElementById("left-sidebar_contents").style.visibility = "visible";
           document.getElementById("left-sidebar").getElementsByTagName("button")[0].innerHTML = "<<<";
-          document.getElementById("left-sidebar_button").innerHTML = "<p><<<</p>";
           document.getElementById("header-section").style.width = "75%";
           document.getElementById("main-section").style.width = "75%";
           document.getElementById("footer-section").style.width = "75%";
@@ -44,11 +43,12 @@
   </head>
   <body>
     <div id="left-sidebar">
-      <button onclick="activateSideBar()">>>></button>
-      <div id="left-sidebar_button" onclick="activateSideBar()"><p>>>></p></div>
+      <button id="menu-button" onclick="activateSideBar()">>>></button>
       <div id="left-sidebar_contents">
-        <div class="sort-button" id="date-button" onclick="setActiveMenu('date')">Date</div>
-        <div class="sort-button" id="topic-button" onclick="setActiveMenu('topic')">Topic</div>
+        <div id="selection-buttons">
+          <button class="sort-button" id="date-button" onclick="setActiveMenu('date')">Date</button>
+          <button class="sort-button" id="topic-button" onclick="setActiveMenu('topic')">Topic</button>
+        </div>
         <hr>
         <div class="navigation-menu" id="navigation-menu_date">
           <div>
@@ -63,9 +63,10 @@
     <div id="header-section"></div>
     <div id="main-section">
       <h1 class="heading">Welcome to my blog!</h1>
-      <p>Welcome to my website! It's being hosted with Apache on a Raspberry PI.</p>
+      <p>Welcome to my website! It's being hosted with Apache on a Raspberry PI.<br></p>
     </div>
     <div id="footer-section" style="text-align: center;"></div>
     <script src="/footerGenerator.js"></script>
+    <!--Should be /footerGenerator.js-->
   </body>
 </html>
