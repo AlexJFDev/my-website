@@ -27,6 +27,7 @@
     border-radius: 0%;
     border: none;
     text-align: right;
+    cursor: pointer;
 }
 
 #left-sidebar_contents {
