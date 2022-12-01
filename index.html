@@ -8,7 +8,7 @@
     <script>
       let left_side_bar_open = false;
 
-      function activateSideBar(){
+      function activateSideBar() {
         if (left_side_bar_open) {
           // If the sidebar is open close it.
           left_side_bar_open = false;
@@ -30,7 +30,7 @@
         }
       }
 
-      function setActiveMenu(menu){
+      function setActiveMenu(menu) {
         let sortButtons = document.getElementsByClassName("sort-button");
         for (let element of sortButtons) element.style.backgroundColor = "var(--left-sidebar_text-color)";
         document.getElementById(`${menu}-button`).style.backgroundColor = "var(--left-sidebar_selection-color)";
@@ -38,6 +38,24 @@
         let navigationMenus = document.getElementsByClassName("navigation-menu");
         for (let element of navigationMenus) element.style.visibility = "hidden";
         document.getElementById(`navigation-menu_${menu}`).style.visibility = "visible";
+      }
+
+      function openDropdown(submenu) {
+        let headingButton = document.getElementById(`${submenu}-heading`);
+        headingButton.innerHTML = `${submenu.replace("_", " ")} ▼`;
+        headingButton.setAttribute("onclick", `closeDropdown("${submenu}")`);
+
+        let dropdown = document.getElementById(`${submenu}-dropdown`);
+        dropdown.style.display = "block";
+      }
+      
+      function closeDropdown(submenu) {
+        let headingButton = document.getElementById(`${submenu}-heading`);
+        headingButton.innerHTML = `${submenu.replace("_", " ")} ▲`;
+        headingButton.setAttribute("onclick", `openDropdown("${submenu}")`);
+
+        let dropdown = document.getElementById(`${submenu}-dropdown`);
+        dropdown.style.display = "none";
       }
     </script>
   </head>
@@ -51,12 +69,34 @@
         </div>
         <hr>
         <div class="navigation-menu" id="navigation-menu_date">
-          <div>
-
+          <div class="submenu">
+            <button class="navigation-menu_heading" id="November_2021-heading" onclick="openDropdown('November_2021')">November 2021 ▲</button>
+            <div class="navigation-menu_dropdown" id="November_2021-dropdown">
+              <a href="/java/java_dates/">Java Dates</a>
+            </div>
+          </div>
+          <div class="submenu">
+            <button class="navigation-menu_heading" id="July_2022-heading" onclick="openDropdown('July_2022')">July 2022 ▲</button>
+            <div class="navigation-menu_dropdown" id="July_2022-dropdown">
+              <div><a href="/minecraft_modding/minecraft_modding_blog1/">Modding Blog 1</a></div>
+              <div></div><a href="/minecraft_modding/minecraft_modding_blog2/">Modding Blog 2</a></div>
+            </div>
           </div>
         </div>
         <div class="navigation-menu" id="navigation-menu_topic">
-
+          <div class="submenu">
+            <button class="navigation-menu_heading" id="November_2021-heading" onclick="openDropdown('November_2021')">November 2021 ▲</button>
+            <div class="navigation-menu_dropdown" id="November_2021-dropdown">
+              <a href="/java/java_dates/">Java Dates</a>
+            </div>
+          </div>
+          <div class="submenu">
+            <button class="navigation-menu_heading" id="July_2022-heading" onclick="openDropdown('July_2022')">July 2022 ▲</button>
+            <div class="navigation-menu_dropdown" id="July_2022-dropdown">
+              <div><a href="/minecraft_modding/minecraft_modding_blog1/">Modding Blog 1</a></div>
+              <div></div><a href="/minecraft_modding/minecraft_modding_blog2/">Modding Blog 2</a></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

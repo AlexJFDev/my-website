@@ -1,11 +1,13 @@
 :root {
     --left-sidebar_background-color: rgb(33, 33, 33);
+    --left-sidebar_press-color: rgb(80, 80, 80);
+    --left-sidebar_hover-color: rgb(125, 125, 125);
     --left-sidebar_text-color: rgb(175, 175, 175);
     --left-sidebar_selection-color: rgb(255, 255, 255);
 }
 
 * {
-    font-family: courier;
+    font-family: "Helvetica Neue";
 }
 
 #left-sidebar {
@@ -30,6 +32,14 @@
     cursor: pointer;
 }
 
+#menu-button:hover {
+    background-color: var(--left-sidebar_hover-color);
+}
+
+#menu-button:active {
+    background-color: var(--left-sidebar_press-color);
+}
+
 #left-sidebar_contents {
     position: absolute;
     top: 10%;
@@ -37,6 +47,12 @@
     width: 90%;
     height: 85%;
     visibility: hidden;
+}
+
+#selection-buttons {
+    position: absolute;
+    width: 100%;
+    height: 10%;
 }
 
 #selection-buttons .sort-button {
@@ -47,22 +63,36 @@
     color: var(--left-sidebar_background-color);
     text-align: center;
     text-decoration: none;
-    font-size: 100%;
+    font-size: 1.4vw;
     cursor: pointer;
 }
 
-.navigation-menu {
-    visibility: hidden;
-    height: 95%;
-    width: 90%;
-    top: 5%;
-    left: 5%;
-    border: 1px solid red;
+#left-sidebar_contents hr {
+    position: absolute;
+    top: 10%;
+    right: 2.5%;
+    width: 95%;
 }
 
-/*Delete Me*/
-#navigation-menu_topic {
-    border: 1px solid green;
+.navigation-menu {
+    position: absolute;
+    top: 12.5%;
+    visibility: hidden;
+    width: 100%;
+}
+
+.navigation-menu_heading {
+    width: 111.1111%;
+    padding: none;
+    border: none;
+}
+
+.navigation-menu_dropdown {
+    display: none;
+}
+
+.navigation-menu_dropdown div {
+    width: 100%;
 }
 
 #header-section {
