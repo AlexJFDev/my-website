@@ -6,103 +6,136 @@
     <link rel="stylesheet" href="/styles.css">
     <!--Should be /styles.css-->
     <script>
-      let left_side_bar_open = false;
-
-      function activateSideBar() {
-        if (left_side_bar_open) {
-          // If the sidebar is open close it.
-          left_side_bar_open = false;
-          document.getElementById("left-sidebar").style.left = "-15%";
-          document.getElementById("left-sidebar_contents").style.visibility = "hidden";
-          document.getElementById("left-sidebar").getElementsByTagName("button")[0].innerHTML = ">>>";
-          document.getElementById("header-section").style.width = "90%";
-          document.getElementById("main-section").style.width = "90%";
-          document.getElementById("footer-section").style.width = "90%";
-        } else {
-          // otherwise, open it!
-          left_side_bar_open = true;
-          document.getElementById("left-sidebar").style.left = "0%";
-          document.getElementById("left-sidebar_contents").style.visibility = "visible";
-          document.getElementById("left-sidebar").getElementsByTagName("button")[0].innerHTML = "<<<";
-          document.getElementById("header-section").style.width = "75%";
-          document.getElementById("main-section").style.width = "75%";
-          document.getElementById("footer-section").style.width = "75%";
+      let sidebarMap = {
+        "left-side-bar-open" : false, // Whether or not the menubar is open.
+        "active-navigation-menu" : "", // The active navigation menu. (selected with the pill buttons)
+        "sorted-menu-maps" : {
+          "date" : { // The dropdowns for the date menu.
+            "July-2022" : false,
+            "November-2021" : false,
+          },
+          "topic" : { // The dropdowns for the topic menu.
+            "Minecraft" : false, 
+          }
         }
       }
 
-      function setActiveMenu(menu) {
-        let sortButtons = document.getElementsByClassName("sort-button");
-        for (let element of sortButtons) element.style.backgroundColor = "var(--left-sidebar_text-color)";
-        document.getElementById(`${menu}-button`).style.backgroundColor = "var(--left-sidebar_selection-color)";
+      function reloadSideBar(sidebarMap) {
+        let leftSideBarOpen = sidebarMap["left-side-bar-open"];
+        let activeNavigationMenu = sidebarMap["active-navigation-menu"];
+        if (leftSideBarOpen) {
+          document.getElementById("left-sidebar").style.left = "0%";
+          document.getElementById("left-sidebar_content").style.visibility = "visible";
+          document.getElementById("left-sidebar_button").innerHTML = "<<<";
+          document.getElementById("header-section").style.width = "75%";
+          document.getElementById("main-section").style.width = "75%";
+          document.getElementById("footer-section").style.width = "75%";
 
-        let navigationMenus = document.getElementsByClassName("navigation-menu");
-        for (let element of navigationMenus) element.style.visibility = "hidden";
-        document.getElementById(`navigation-menu_${menu}`).style.visibility = "visible";
+          let sortButtons = document.getElementsByClassName("sort-button");
+          for (let element of sortButtons) element.style.backgroundColor = "var(--left-sidebar_text-color)";
+          document.getElementById(`sort-menu_${activeNavigationMenu}-button`).style.backgroundColor = "var(--left-sidebar_selection-color)";
+
+          let sortedMenus = document.getElementsByClassName("sorted-menu");
+          for (let element of sortedMenus) element.style.visibility = "hidden";
+          document.getElementById(`navigation-menu_by-${activeNavigationMenu}`).style.visibility = "visible";
+
+          let dropdowns = sidebarMap["sorted-menu-maps"][activeMenu];
+          for ([dropdown, dropdownOpen] of Object.entries(dropdowns)) {
+            if (dropdownOpen) {
+              document.getElementById(`dropdown_${dropdown}`).classList = `${activeMenu}-dropdown expanded`
+            } else {
+              document.getElementById(`dropdown_${dropdown}`).classList = `${activeMenu}-dropdown collapsed`
+            }
+          }
+        } else {
+          document.getElementById("left-sidebar").style.left = "-15%";
+          document.getElementById("left-sidebar_content").style.visibility = "hidden";
+          document.getElementById("left-sidebar_button").innerHTML = ">>>";
+          document.getElementById("header-section").style.width = "90%";
+          document.getElementById("main-section").style.width = "90%";
+          document.getElementById("footer-section").style.width = "90%";
+
+          document.getElementById(`navigation-menu_by-${activeNavigationMenu}`).style.visibility = "hidden";
+        }
       }
 
-      function openDropdown(submenu) {
-        let headingButton = document.getElementById(`${submenu}-heading`);
-        headingButton.innerHTML = `${submenu.replace("_", " ")} ▼`;
-        headingButton.setAttribute("onclick", `closeDropdown("${submenu}")`);
-
-        let dropdown = document.getElementById(`${submenu}-dropdown`);
-        dropdown.style.display = "block";
+      function toggleSideBar() {
+        leftSideBarOpen = sidebarMap["left-side-bar-open"];
+        if (leftSideBarOpen) {
+          sidebarMap["left-side-bar-open"] = false;
+        } else {
+          sidebarMap["left-side-bar-open"] = true;
+        }
+        reloadSideBar(sidebarMap);
       }
-      
-      function closeDropdown(submenu) {
-        let headingButton = document.getElementById(`${submenu}-heading`);
-        headingButton.innerHTML = `${submenu.replace("_", " ")} ▲`;
-        headingButton.setAttribute("onclick", `openDropdown("${submenu}")`);
 
-        let dropdown = document.getElementById(`${submenu}-dropdown`);
-        dropdown.style.display = "none";
+      function setActiveNavigationMenu(menu) {
+        sidebarMap["active-navigation-menu"] = menu;
+        reloadSideBar(sidebarMap);
+      }
+
+      function toggleDropdown(dropdown) {
+        activeMenu = sidebarMap["active-navigation-menu"];
+        dropdownOpen = sidebarMap["sorted-menu-maps"][activeMenu][dropdown];
+        if (dropdownOpen) {
+          sidebarMap["sorted-menu-maps"][activeMenu][dropdown] = false;
+        } else {
+          sidebarMap["sorted-menu-maps"][activeMenu][dropdown] = true;
+        }
+        reloadSideBar(sidebarMap);
       }
     </script>
   </head>
   <body>
+    <!-- Left Side Bar Start -->
     <div id="left-sidebar">
-      <button id="menu-button" onclick="activateSideBar()">>>></button>
-      <div id="left-sidebar_contents">
-        <div id="selection-buttons">
-          <button class="sort-button" id="date-button" onclick="setActiveMenu('date')">Date</button>
-          <button class="sort-button" id="topic-button" onclick="setActiveMenu('topic')">Topic</button>
+      <button id="left-sidebar_button" onclick="toggleSideBar()">>>></button>
+      <!-- Left Side Bar Content Start -->
+      <div id="left-sidebar_content">
+        <div id="left-sidebar_sort-menu">
+          <button class="sort-button" id="sort-menu_date-button" onclick="setActiveNavigationMenu('date')">Date</button>
+          <button class="sort-button" id="sort-menu_topic-button" onclick="setActiveNavigationMenu('topic')">Topic</button>
         </div>
-        <hr>
-        <div class="navigation-menu" id="navigation-menu_date">
-          <div class="submenu">
-            <button class="navigation-menu_heading" id="November_2021-heading" onclick="openDropdown('November_2021')">November 2021 ▲</button>
-            <div class="navigation-menu_dropdown" id="November_2021-dropdown">
-              <a href="/java/java_dates/">Java Dates</a>
+        <!-- Left Side Bar Navigation Menus Start -->
+        <div id="left-sidebar_navigation-menu">
+          <!-- Left Side Bar Date Menu Start -->
+          <div class="sorted-menu" id="navigation-menu_by-date">
+            <div class="date-dropdown collapsed" id="dropdown_July-2022">
+              <button class="dropdown-heading" id="dropdown_July-2022_heading" onclick="toggleDropdown('July-2022')">July 2022 ▲</button>
+              <div class="dropdown-content" id="dropdown_July-2022_content">
+                <a href="/minecraft_modding/minecraft_modding_blog1/">Modding Blog 1</a>
+                <a href="/minecraft_modding/minecraft_modding_blog2/">Modding Blog 2</a>
+              </div>
+            </div>
+            <div class="date-dropdown collapsed" id="dropdown_November-2021">
+              <button class="dropdown-heading" id="dropdown_November-2021_heading" onclick="toggleDropdown('November-2021')">November 2021 ▲</button>
+              <div class="dropdown-content" id="dropdown_November-2021_content">
+                <a href="/java/java_dates/">Java Dates</a>
+              </div>
             </div>
           </div>
-          <div class="submenu">
-            <button class="navigation-menu_heading" id="July_2022-heading" onclick="openDropdown('July_2022')">July 2022 ▲</button>
-            <div class="navigation-menu_dropdown" id="July_2022-dropdown">
-              <div><a href="/minecraft_modding/minecraft_modding_blog1/">Modding Blog 1</a></div>
-              <div></div><a href="/minecraft_modding/minecraft_modding_blog2/">Modding Blog 2</a></div>
+          <!-- Left Side Bar Date Menu End -->
+          <!-- Left Side Bar Topic Menu Start -->
+          <div class="sorted-menu" id="navigation-menu_by-topic">
+            <div class="topic-dropdown collapsed" id="dropdown_Minecraft">
+              <button class="dropdown-heading" id="dropdown_November-2021_heading" onclick="toggleDropdown('Minecraft')">Minecraft ▲</button>
+              <div class="dropdown-content" id="dropdown_November-2021_content">
+                <a href="/minecraft_modding/minecraft_modding_blog1/">Modding Blog 1</a>
+                <a href="/minecraft_modding/minecraft_modding_blog2/">Modding Blog 2</a>
+              </div>
             </div>
           </div>
+          <!-- Left Side Bar Topic Menu End -->
         </div>
-        <div class="navigation-menu" id="navigation-menu_topic">
-          <div class="submenu">
-            <button class="navigation-menu_heading" id="November_2021-heading" onclick="openDropdown('November_2021')">November 2021 ▲</button>
-            <div class="navigation-menu_dropdown" id="November_2021-dropdown">
-              <a href="/java/java_dates/">Java Dates</a>
-            </div>
-          </div>
-          <div class="submenu">
-            <button class="navigation-menu_heading" id="July_2022-heading" onclick="openDropdown('July_2022')">July 2022 ▲</button>
-            <div class="navigation-menu_dropdown" id="July_2022-dropdown">
-              <div><a href="/minecraft_modding/minecraft_modding_blog1/">Modding Blog 1</a></div>
-              <div></div><a href="/minecraft_modding/minecraft_modding_blog2/">Modding Blog 2</a></div>
-            </div>
-          </div>
-        </div>
+        <!-- Left Side Bar Navigation Menus End -->
       </div>
+      <!-- Left Side Bar Content End -->
     </div>
-    <div id="header-section"></div>
+    <!-- Left Side Bar End -->
+    <div id="header-section">
+      <h1>Welcome to my blog!</h1>
+    </div>
     <div id="main-section">
-      <h1 class="heading">Welcome to my blog!</h1>
       <p>Welcome to my website! It's being hosted with Apache on a Raspberry PI.<br></p>
     </div>
     <div id="footer-section" style="text-align: center;"></div>
