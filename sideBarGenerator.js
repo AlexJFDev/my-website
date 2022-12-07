@@ -8,9 +8,10 @@ var sideBarString =
     <li><a href="/csc205/the_octal_and_hexadecimal_number_systems">Octal and Hexadecimal Numbers</a></li>
     <li><a href="/csc205/altair_assembler">My Altair-8800 Assembler</a></li>
     <li><a href="/csc205/anagram_algorithms">Anagram Algorithms</a></li>
+    <li><a href="/csc205/types_of_computer_memory">Types of Computer Memory</a></li>
     </ul>
 </div>
-<div id ="modding">
+<div id="modding">
   <p class="heading">Minecraft Modding</p>
   <ul class="sidebar-div--content">
     <li><a href="/minecraft_modding/minecraft_modding_blog1">Modding Blog #1</a></li>
