@@ -26,7 +26,7 @@
         if (leftSideBarOpen) {
           document.getElementById("left-sidebar").style.left = "0%";
           document.getElementById("left-sidebar_content").style.visibility = "visible";
-          document.getElementById("left-sidebar_button").innerHTML = "<<<";
+          document.getElementById("left-sidebar_button_text").innerHTML = "<<<";
           document.getElementById("header-section").style.width = "75%";
           document.getElementById("main-section").style.width = "75%";
           document.getElementById("footer-section").style.width = "75%";
@@ -42,15 +42,15 @@
           let dropdowns = sidebarMap["sorted-menu-maps"][activeMenu];
           for ([dropdown, dropdownOpen] of Object.entries(dropdowns)) {
             if (dropdownOpen) {
-              document.getElementById(`dropdown_${dropdown}`).classList = `expanded-dropdown`
+              document.getElementById(`dropdown_${dropdown}`).classList = "expanded-dropdown"
             } else {
-              document.getElementById(`dropdown_${dropdown}`).classList = `collapsed-dropdown`
+              document.getElementById(`dropdown_${dropdown}`).classList = "collapsed-dropdown"
             }
           }
         } else {
           document.getElementById("left-sidebar").style.left = "-15%";
           document.getElementById("left-sidebar_content").style.visibility = "hidden";
-          document.getElementById("left-sidebar_button").innerHTML = ">>>";
+          document.getElementById("left-sidebar_button_text").innerHTML = ">>>";
           document.getElementById("header-section").style.width = "90%";
           document.getElementById("main-section").style.width = "90%";
           document.getElementById("footer-section").style.width = "90%";
@@ -89,7 +89,9 @@
   <body>
     <!-- Left Side Bar Start -->
     <div id="left-sidebar">
-      <button id="left-sidebar_button" onclick="toggleSideBar()">>>></button>
+      <button id="left-sidebar_button" onclick="toggleSideBar()">
+        <div id="left-sidebar_button_text"><p>>>></p></div>
+      </button>
       <!-- Left Side Bar Content Start -->
       <div id="left-sidebar_content">
         <div id="left-sidebar_sort-menu">
