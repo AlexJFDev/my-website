@@ -11,11 +11,11 @@
         "active-navigation-menu" : "", // The active navigation menu. (selected with the pill buttons)
         "sorted-menu-maps" : {
           "date" : { // The dropdowns for the date menu.
-            "July-2022" : false,
-            "November-2021" : false,
+            "july-2022" : false,
+            "november-2021" : false,
           },
           "topic" : { // The dropdowns for the topic menu.
-            "Minecraft" : false, 
+            "minecraft" : false, 
           }
         }
       }
@@ -42,9 +42,9 @@
           let dropdowns = sidebarMap["sorted-menu-maps"][activeMenu];
           for ([dropdown, dropdownOpen] of Object.entries(dropdowns)) {
             if (dropdownOpen) {
-              document.getElementById(`dropdown_${dropdown}`).classList = `${activeMenu}-dropdown expanded`
+              document.getElementById(`dropdown_${dropdown}`).classList = `expanded-dropdown`
             } else {
-              document.getElementById(`dropdown_${dropdown}`).classList = `${activeMenu}-dropdown collapsed`
+              document.getElementById(`dropdown_${dropdown}`).classList = `collapsed-dropdown`
             }
           }
         } else {
@@ -100,16 +100,21 @@
         <div id="left-sidebar_navigation-menu">
           <!-- Left Side Bar Date Menu Start -->
           <div class="sorted-menu" id="navigation-menu_by-date">
-            <div class="date-dropdown collapsed" id="dropdown_July-2022">
-              <button class="dropdown-heading" id="dropdown_July-2022_heading" onclick="toggleDropdown('July-2022')">July 2022 ▲</button>
-              <div class="dropdown-content" id="dropdown_July-2022_content">
+            <div class="collapsed-dropdown" id="dropdown_july-2022">
+              <button class="dropdown-heading" id="dropdown_july-2022_heading" onclick="toggleDropdown('july-2022')">
+                <p class="date-heading-month">July</p>
+                <p class="date-heading-year">2022</p>
+                <p class="collapsed-arrow">▲</p>
+                <p class="expanded-arrow">▼</p>
+              </button>
+              <div class="dropdown-content" id="dropdown_july-2022_content">
                 <a href="/minecraft_modding/minecraft_modding_blog1/">Modding Blog 1</a>
                 <a href="/minecraft_modding/minecraft_modding_blog2/">Modding Blog 2</a>
               </div>
             </div>
-            <div class="date-dropdown collapsed" id="dropdown_November-2021">
-              <button class="dropdown-heading" id="dropdown_November-2021_heading" onclick="toggleDropdown('November-2021')">November 2021 ▲</button>
-              <div class="dropdown-content" id="dropdown_November-2021_content">
+            <div class="collapsed-dropdown" id="dropdown_november-2021">
+              <button class="dropdown-heading" id="dropdown_november-2021_heading" onclick="toggleDropdown('november-2021')">November 2021 ▲</button>
+              <div class="dropdown-content" id="dropdown_november-2021_content">
                 <a href="/java/java_dates/">Java Dates</a>
               </div>
             </div>
@@ -117,9 +122,9 @@
           <!-- Left Side Bar Date Menu End -->
           <!-- Left Side Bar Topic Menu Start -->
           <div class="sorted-menu" id="navigation-menu_by-topic">
-            <div class="topic-dropdown collapsed" id="dropdown_Minecraft">
-              <button class="dropdown-heading" id="dropdown_November-2021_heading" onclick="toggleDropdown('Minecraft')">Minecraft ▲</button>
-              <div class="dropdown-content" id="dropdown_November-2021_content">
+            <div class="collapsed-dropdown" id="dropdown_minecraft">
+              <button class="dropdown-heading" id="dropdown_november-2021_heading" onclick="toggleDropdown('minecraft')">Minecraft ▲</button>
+              <div class="dropdown-content" id="dropdown_november-2021_content">
                 <a href="/minecraft_modding/minecraft_modding_blog1/">Modding Blog 1</a>
                 <a href="/minecraft_modding/minecraft_modding_blog2/">Modding Blog 2</a>
               </div>
