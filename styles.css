@@ -13,7 +13,7 @@
 #left-sidebar {
   position: fixed;
   top: 0px;
-  left: -238px;
+  left: -258px;
   height: 100%;
   width: 288px;
   background-color: var(--left-sidebar_background-color);
@@ -24,7 +24,7 @@
   position: absolute;
   top: 0px;
   right: 0px;
-  height: 5%;
+  height: 30px;
   width: 100%;
   border: none;
   cursor: pointer;
@@ -113,7 +113,7 @@
   position: fixed;
   height: 10%;
   width: 90%;
-  right: 2.5%;
+  left: 60px;
   top: 0%;
   font-size: 80%;
 }
@@ -121,7 +121,7 @@
 #main-section {
   position: fixed;
   top: 10%;
-  right: 2.5%;
+  left: 60px;
   height: 80%;
   width: 90%;
 }
@@ -130,7 +130,7 @@
   position: fixed;
   height: 10%;
   width: 90%;
-  right: 2.5%;
+  left: 60px;
   top: 90%;
   font-size: 80%;
 }
