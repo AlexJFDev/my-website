@@ -1,0 +1,66 @@
+<div id="sidebar">
+    <button id="left-sidebar_handle" onclick="toggleSideBar()"> <!-- The Handle is the grey bar that opens and closes the sidebar -->
+    <img id="hamburger" src="/hamburger.svg" width="30" height="30">
+    </button>
+    <!-- Left Side Bar Content Start -->
+    <div id="left-sidebar_content">
+    <div id="left-sidebar_sort-menu">
+        <button class="sort-button" id="sort-menu_home-button" onclick="reloadContent('/')">Home</button>
+        <button class="sort-button" id="sort-menu_date-button" onclick="setActiveNavigationMenu('date')">Date</button>
+        <button class="sort-button" id="sort-menu_topic-button" onclick="setActiveNavigationMenu('topic')">Topic</button>
+    </div>
+    <!-- Left Side Bar Navigation Menus Start -->
+    <div id="left-sidebar_navigation-menu">
+        <!-- Left Side Bar Date Menu Start -->
+        <div class="sorted-menu" id="navigation-menu_by-date">
+        <div class="collapsed-dropdown" id="dropdown_july-2022">
+            <button class="dropdown-heading" id="dropdown_july-2022_heading" onclick="toggleDropdown('july-2022')">
+            <p class="date-heading-month">July</p>
+            <div class="date-heading-year-arrow">
+                <p class="date-heading-year">2022</p>
+                <p class="collapsed-arrow">▲</p>
+                <p class="expanded-arrow">▼</p>
+            </div>
+            </button>
+            <div class="dropdown-content" id="dropdown_july-2022_content">
+            <a href="javascript:reloadContent('/minecraft_modding/minecraft_modding_blog1/')">Modding Blog 1</a>
+            <a href="javascript:reloadContent('/minecraft_modding/minecraft_modding_blog2/')">Modding Blog 2</a>
+            </div>
+        </div>
+        <div class="collapsed-dropdown" id="dropdown_november-2021">
+            <button class="dropdown-heading" id="dropdown_november-2021_heading" onclick="toggleDropdown('november-2021')">
+            <p class="date-heading-month">November</p>
+            <div class="date-heading-year-arrow">
+                <p class="date-heading-year">2021</p>
+                <p class="collapsed-arrow">▲</p>
+                <p class="expanded-arrow">▼</p>
+            </div>
+            </button>
+            <div class="dropdown-content" id="dropdown_november-2021_content">
+            <a href="javascript:reloadContent('/java/java_dates/')">Java Dates</a>
+            </div>
+        </div>
+        </div>
+        <!-- Left Side Bar Date Menu End -->
+        <!-- Left Side Bar Topic Menu Start -->
+        <div class="sorted-menu" id="navigation-menu_by-topic">
+        <div class="collapsed-dropdown" id="dropdown_minecraft">
+            <button class="dropdown-heading" id="dropdown_minecraft_heading" onclick="toggleDropdown('minecraft')">
+            <p class="topic-heading">Minecraft</p>
+            <div class="topic-heading-arrow">
+                <p class="collapsed-arrow">▲</p>
+                <p class="expanded-arrow">▼</p>
+            </div>
+            </button>
+            <div class="dropdown-content" id="minecraft_content">
+            <a href="javascript:reloadContent('/minecraft_modding/minecraft_modding_blog1/')">Modding Blog 1</a>
+            <a href="javascript:reloadContent('/minecraft_modding/minecraft_modding_blog2/')">Modding Blog 2</a>
+            </div>
+        </div>
+        </div>
+        <!-- Left Side Bar Topic Menu End -->
+    </div>
+    <!-- Left Side Bar Navigation Menus End -->
+    </div>
+    <!-- Left Side Bar Content End -->
+</div>

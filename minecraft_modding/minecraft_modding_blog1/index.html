@@ -2,30 +2,97 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title class="heading">Modding Blog 1</title>
+    <title class="heading">Minecraft Modding Blog 1</title>
     <link rel="stylesheet" href="/styles.css">
+    <!--Should be /styles.css-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/sidebar.js"></script>
   </head>
   <body>
-  <!-- content starts below here -->
-    <div id="sidebar"></div>
-    <div id="date"><p>7/15/2022</p></div>
-    <div id="main-content">
-        <h1 class="heading">Modding Blog 1</h1>
-        <!-- main content starts below here -->
-        <p>Several months ago. Probably about 9 or 10 I started working on a Minecraft mod. The idea started as a joke in my Java programming class between 2 other friends that we develop the mod and present it to our teacher who wasn't very knowledgeable on these sorts of things. I worked on it a little but eventually lost interest and my friends contributed basically nothing to the project. Eventually we decided on working on a "Java Algebra System" which ended up being an overly ambitious project.</p>
-        <p>That original mod I gave the uncreative name of "Vanilla Improvements: Agriculture". When I submitted the version 0.0.1-alpha to upload onto Curseforge (the leading website for mod hosting) it was denied basically for being uncreative. This was also around when I lost interest.</p>
-        <p>Fast forward to this week when I regained interest in the project. The first thing that I did was to sit down and rethink the name for my mod. Since the mod has remained agriculture themed I knew that the name should be related. Eventually I came up with "Homegrown". I came up with the name by googling "synonyms for 'rustic' (a mod that this project is inspired by)" and found the word "homespun" from there it wasn't hard to come up with the name "Homegrown" and another google search showed me that there was no other mod with that name.</p>
-        <p>After coming up with a new name I began tackling the bugs and incomplete features that I had previously filed as issues. The first problem to be solved (and with the least hassle) was the one that I had been having the most difficulty with previously. Within the first day or so of starting work back up on my mod I had fixed the issue. I slowly worked my way through the remaining bugs and then began updating textures, adding more post blocks (you'll understand if you check out the mod), and attempting to get my Cantaloupes to generate naturally.</p>
-        <p>Generating my Cantaloupes proved to be the most difficult issue to solve. I first tried adding the "features" (a technical Minecraft term) in code following along with the tutorial on the Fabric website. Eventually I realized that this tutorial was out of date and I was told to try adding my Cantaloupes a different way with something called a Datapack. But, this had it's own issues first requiring me to update my Minecraft version (a hassle) and then it still didn't work. Eventually after reading the wiki page about Datapacks I realized that I was missing another file but it still didn't work. I resolved to work on solving other problems until eventually I was left with just the Cantaloupes. With fresh eyes I realized that there was a second file that was missing from my Datapack. Once I included this file (actually 3 files) everything worked properly and I built version 0.0.1-beta of my mod.</p>
-        <p>My mod can be found at <a href="https://www.curseforge.com/minecraft/mc-mods/homegrown">this link</a> if you'd like to check it out.</p>
-        <!-- main content ends above here -->
+    <!-- Left Side Bar Start -->
+    <div id="left-sidebar">
+      <button id="left-sidebar_handle" onclick="toggleSideBar();"> <!-- The Handle is the grey bar that opens and closes the sidebar -->
+        <img id="hamburger" src="/hamburger.svg" width="30" height="30">
+      </button>
+      <!-- Left Side Bar Content Start -->
+      <div id="left-sidebar_content">
+        <div id="left-sidebar_sort-menu">
+          <button class="sort-button" id="sort-menu_date-button" onclick="setActiveNavigationMenu('date')">Date</button>
+          <button class="sort-button" id="sort-menu_topic-button" onclick="setActiveNavigationMenu('topic')">Topic</button>
+        </div>
+        <!-- Left Side Bar Navigation Menus Start -->
+        <div id="left-sidebar_navigation-menu">
+          <!-- Left Side Bar Date Menu Start -->
+          <div class="sorted-menu" id="navigation-menu_by-date">
+            <div class="collapsed-dropdown" id="dropdown_july-2022">
+              <button class="dropdown-heading" id="dropdown_july-2022_heading" onclick="toggleDropdown('july-2022')">
+                <p class="date-heading-month">July</p>
+                <div class="date-heading-year-arrow">
+                  <p class="date-heading-year">2022</p>
+                  <p class="collapsed-arrow">▲</p>
+                  <p class="expanded-arrow">▼</p>
+                </div>
+              </button>
+              <div class="dropdown-content" id="dropdown_july-2022_content">
+                <a href="/minecraft_modding/minecraft_modding_blog1/">Modding Blog 1</a>
+                <a href="/minecraft_modding/minecraft_modding_blog2/">Modding Blog 2</a>
+              </div>
+            </div>
+            <div class="collapsed-dropdown" id="dropdown_november-2021">
+              <button class="dropdown-heading" id="dropdown_november-2021_heading" onclick="toggleDropdown('november-2021')">
+                <p class="date-heading-month">November</p>
+                <div class="date-heading-year-arrow">
+                  <p class="date-heading-year">2021</p>
+                  <p class="collapsed-arrow">▲</p>
+                  <p class="expanded-arrow">▼</p>
+                </div>
+              </button>
+              <div class="dropdown-content" id="dropdown_november-2021_content">
+                <a href="/java/java_dates/">Java Dates</a>
+              </div>
+            </div>
+          </div>
+          <!-- Left Side Bar Date Menu End -->
+          <!-- Left Side Bar Topic Menu Start -->
+          <div class="sorted-menu" id="navigation-menu_by-topic">
+            <div class="collapsed-dropdown" id="dropdown_minecraft">
+              <button class="dropdown-heading" id="dropdown_minecraft_heading" onclick="toggleDropdown('minecraft')">
+                <p class="topic-heading">Minecraft</p>
+                <div class="topic-heading-arrow">
+                  <p class="collapsed-arrow">▲</p>
+                  <p class="expanded-arrow">▼</p>
+                </div>
+              </button>
+              <div class="dropdown-content" id="minecraft_content">
+                <a href="/minecraft_modding/minecraft_modding_blog1/">Modding Blog 1</a>
+                <a href="/minecraft_modding/minecraft_modding_blog2/">Modding Blog 2</a>
+              </div>
+            </div>
+          </div>
+          <!-- Left Side Bar Topic Menu End -->
+        </div>
+        <!-- Left Side Bar Navigation Menus End -->
+      </div>
+      <!-- Left Side Bar Content End -->
     </div>
-    <!-- main content ends above here -->
-    <footer id="verification-footer" style="text-align: center;"></footer>
-    <!-- Javascript imports start below here -->
-    <script src="/sideBarGenerator.js"></script>
+    <!-- Left Side Bar End -->
+    <div id="header-section">
+      <h1>Modding Blog 1</h1>
+    </div>
+    <div id="main-section">
+      <h1 class="heading">Modding Blog 1</h1>
+      <!-- main content starts below here -->
+      <p>Several months ago. Probably about 9 or 10 I started working on a Minecraft mod. The idea started as a joke in my Java programming class between 2 other friends that we develop the mod and present it to our teacher who wasn't very knowledgeable on these sorts of things. I worked on it a little but eventually lost interest and my friends contributed basically nothing to the project. Eventually we decided on working on a "Java Algebra System" which ended up being an overly ambitious project.</p>
+      <p>That original mod I gave the uncreative name of "Vanilla Improvements: Agriculture". When I submitted the version 0.0.1-alpha to upload onto Curseforge (the leading website for mod hosting) it was denied basically for being uncreative. This was also around when I lost interest.</p>
+      <p>Fast forward to this week when I regained interest in the project. The first thing that I did was to sit down and rethink the name for my mod. Since the mod has remained agriculture themed I knew that the name should be related. Eventually I came up with "Homegrown". I came up with the name by googling "synonyms for 'rustic' (a mod that this project is inspired by)" and found the word "homespun" from there it wasn't hard to come up with the name "Homegrown" and another google search showed me that there was no other mod with that name.</p>
+      <p>After coming up with a new name I began tackling the bugs and incomplete features that I had previously filed as issues. The first problem to be solved (and with the least hassle) was the one that I had been having the most difficulty with previously. Within the first day or so of starting work back up on my mod I had fixed the issue. I slowly worked my way through the remaining bugs and then began updating textures, adding more post blocks (you'll understand if you check out the mod), and attempting to get my Cantaloupes to generate naturally.</p>
+      <p>Generating my Cantaloupes proved to be the most difficult issue to solve. I first tried adding the "features" (a technical Minecraft term) in code following along with the tutorial on the Fabric website. Eventually I realized that this tutorial was out of date and I was told to try adding my Cantaloupes a different way with something called a Datapack. But, this had it's own issues first requiring me to update my Minecraft version (a hassle) and then it still didn't work. Eventually after reading the wiki page about Datapacks I realized that I was missing another file but it still didn't work. I resolved to work on solving other problems until eventually I was left with just the Cantaloupes. With fresh eyes I realized that there was a second file that was missing from my Datapack. Once I included this file (actually 3 files) everything worked properly and I built version 0.0.1-beta of my mod.</p>
+      <p>My mod can be found at <a href="https://www.curseforge.com/minecraft/mc-mods/homegrown">this link</a> if you'd like to check it out.</p>
+      <!-- main content ends above here -->
+    </div>
+    <div id="footer-section" style="text-align: center;"></div>
     <script src="/footerGenerator.js"></script>
-    <!-- Javascript imports end above here -->
-  <!-- content ends above here -->
+    <!--Should be /footerGenerator.js-->
   </body>
 </html>

@@ -5,162 +5,38 @@
     <title class="heading">Blog Homepage</title>
     <link rel="stylesheet" href="/styles.css">
     <!--Should be /styles.css-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/sidebar.js"></script>
     <script>
-      let sidebarMap = {
-        "left-side-bar-open" : false, // Whether or not the menubar is open.
-        "active-navigation-menu" : "", // The active navigation menu. (selected with the pill buttons)
-        "sorted-menu-maps" : {
-          "date" : { // The dropdowns for the date menu.
-            "july-2022" : false,
-            "november-2021" : false,
-          },
-          "topic" : { // The dropdowns for the topic menu.
-            "minecraft" : false, 
-          }
-        }
-      }
-      let widthModulator = -60;
-
-      function reloadSideBar(sidebarMap) {
-        let leftSideBarOpen = sidebarMap["left-side-bar-open"];
-        let activeNavigationMenu = sidebarMap["active-navigation-menu"];
-        if (leftSideBarOpen) {
-          document.getElementById("left-sidebar").style.left = "0px";
-          document.getElementById("left-sidebar_content").style.visibility = "visible";
-          widthModulator = -318;
-          resizeContent()
-
-          if (!activeNavigationMenu) return;
-
-          let sortButtons = document.getElementsByClassName("sort-button");
-          for (let element of sortButtons) element.style.backgroundColor = "var(--left-sidebar_text-color)";
-          document.getElementById(`sort-menu_${activeNavigationMenu}-button`).style.backgroundColor = "var(--left-sidebar_selection-color)";
-
-          let sortedMenus = document.getElementsByClassName("sorted-menu");
-          for (let element of sortedMenus) element.style.visibility = "hidden";
-          document.getElementById(`navigation-menu_by-${activeNavigationMenu}`).style.visibility = "visible";
-
-          let dropdowns = sidebarMap["sorted-menu-maps"][activeMenu];
-          for ([dropdown, dropdownOpen] of Object.entries(dropdowns)) {
-            if (dropdownOpen) {
-              document.getElementById(`dropdown_${dropdown}`).classList = "expanded-dropdown"
-            } else {
-              document.getElementById(`dropdown_${dropdown}`).classList = "collapsed-dropdown"
-            }
-          }
-        } else {
-          document.getElementById("left-sidebar").style.left = "-258px";
-          document.getElementById("left-sidebar_content").style.visibility = "hidden";
-          widthModulator = -60;
-          resizeContent()
-
-          if (!activeNavigationMenu) return;
-
-          document.getElementById(`navigation-menu_by-${activeNavigationMenu}`).style.visibility = "hidden";
-        }
+      window.onload = function(){
+        $("#left-sidebar").load("/left_sidebar.html #sidebar")
       }
 
-      function toggleSideBar() {
-        leftSideBarOpen = sidebarMap["left-side-bar-open"];
-        if (leftSideBarOpen) {
-          sidebarMap["left-side-bar-open"] = false;
-        } else {
-          sidebarMap["left-side-bar-open"] = true;
-        }
-        reloadSideBar(sidebarMap);
-      }
+      function reloadContent(url){
+        $("#header-section").load(`${url} #header-section`, function() {
+          gsap.to("#header-section", {duration: 0, left: "318px"});
+        });
+        $("#main-section").load(`${url} #main-section`, function() {
+          gsap.to("#main-section", {duration: 0, left: "318px"});
+        });
+        $("#footer-section").load(`${url} #footer-section`, function() {
+          gsap.to("#footer-section", {duration: 0, left: "318px"});
+        });
 
-      function setActiveNavigationMenu(menu) {
-        sidebarMap["active-navigation-menu"] = menu;
-        reloadSideBar(sidebarMap);
-      }
-
-      function toggleDropdown(dropdown) {
-        activeMenu = sidebarMap["active-navigation-menu"];
-        dropdownOpen = sidebarMap["sorted-menu-maps"][activeMenu][dropdown];
-        if (dropdownOpen) {
-          sidebarMap["sorted-menu-maps"][activeMenu][dropdown] = false;
-        } else {
-          sidebarMap["sorted-menu-maps"][activeMenu][dropdown] = true;
-        }
-        reloadSideBar(sidebarMap);
-      }
-
-      function resizeContent(){
-        windowWidth = window.innerWidth + widthModulator
-        document.getElementById("header-section").style.width = `${windowWidth}px`;
-        document.getElementById("main-section").style.width = `${windowWidth}px`;
-        document.getElementById("footer-section").style.width = `${windowWidth}px`;
-      }
-
-      window.onload = function() {
-        resizeContent();
-      }
-
-      window.onresize = function() {
-        resizeContent();
+        window.history.pushState("", "", `${url}`);
       }
     </script>
   </head>
   <body>
     <!-- Left Side Bar Start -->
-    <div id="left-sidebar">
-      <button id="left-sidebar_button" onclick="toggleSideBar();">
-        <object id ="hamburger" type="image/svg+xml" data="hamburger.svg" width="30" height="30"></object>
-      </button>
-      <!-- Left Side Bar Content Start -->
-      <div id="left-sidebar_content">
-        <div id="left-sidebar_sort-menu">
-          <button class="sort-button" id="sort-menu_date-button" onclick="setActiveNavigationMenu('date')">Date</button>
-          <button class="sort-button" id="sort-menu_topic-button" onclick="setActiveNavigationMenu('topic')">Topic</button>
-        </div>
-        <!-- Left Side Bar Navigation Menus Start -->
-        <div id="left-sidebar_navigation-menu">
-          <!-- Left Side Bar Date Menu Start -->
-          <div class="sorted-menu" id="navigation-menu_by-date">
-            <div class="collapsed-dropdown" id="dropdown_july-2022">
-              <button class="dropdown-heading" id="dropdown_july-2022_heading" onclick="toggleDropdown('july-2022')">
-                <p class="date-heading-month">July</p>
-                <p class="date-heading-year">2022</p>
-                <p class="collapsed-arrow">▲</p>
-                <p class="expanded-arrow">▼</p>
-              </button>
-              <div class="dropdown-content" id="dropdown_july-2022_content">
-                <a href="/minecraft_modding/minecraft_modding_blog1/">Modding Blog 1</a>
-                <a href="/minecraft_modding/minecraft_modding_blog2/">Modding Blog 2</a>
-              </div>
-            </div>
-            <div class="collapsed-dropdown" id="dropdown_november-2021">
-              <button class="dropdown-heading" id="dropdown_november-2021_heading" onclick="toggleDropdown('november-2021')">November 2021 ▲</button>
-              <div class="dropdown-content" id="dropdown_november-2021_content">
-                <a href="/java/java_dates/">Java Dates</a>
-              </div>
-            </div>
-          </div>
-          <!-- Left Side Bar Date Menu End -->
-          <!-- Left Side Bar Topic Menu Start -->
-          <div class="sorted-menu" id="navigation-menu_by-topic">
-            <div class="collapsed-dropdown" id="dropdown_minecraft">
-              <button class="dropdown-heading" id="dropdown_november-2021_heading" onclick="toggleDropdown('minecraft')">Minecraft ▲</button>
-              <div class="dropdown-content" id="dropdown_november-2021_content">
-                <a href="/minecraft_modding/minecraft_modding_blog1/">Modding Blog 1</a>
-                <a href="/minecraft_modding/minecraft_modding_blog2/">Modding Blog 2</a>
-              </div>
-            </div>
-          </div>
-          <!-- Left Side Bar Topic Menu End -->
-        </div>
-        <!-- Left Side Bar Navigation Menus End -->
-      </div>
-      <!-- Left Side Bar Content End -->
-    </div>
+    <div id="left-sidebar"></div>
     <!-- Left Side Bar End -->
     <div id="header-section">
       <h1>Welcome to my blog!</h1>
     </div>
     <div id="main-section">
-      <p>Welcome to my website! It's being hosted with Apache on a Raspberry PI.<br></p>
-      <button  onclick="document.getElementById('hamburger').contentDocument.getElementById('eewUFzPt3RK1').dispatchEvent(new Event('click'));"></button>
+      <p>Welcome to my website! It's being hosted with Apache on a Raspberry PI.</p>
     </div>
     <div id="footer-section" style="text-align: center;"></div>
     <script src="/footerGenerator.js"></script>
