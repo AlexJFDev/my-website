@@ -1,9 +1,9 @@
 :root {
-  --left-sidebar_background-color: rgb(33, 33, 33);
-  --left-sidebar_press-color: rgb(80, 80, 80);
-  --left-sidebar_hover-color: rgb(125, 125, 125);
-  --left-sidebar_text-color: rgb(175, 175, 175);
-  --left-sidebar_selection-color: rgb(255, 255, 255);
+  --left-sidebar_background-color: #212121;
+  --left-sidebar_press-color: #505050;
+  --left-sidebar_hover-color: #7d7d7d;
+  --left-sidebar_text-color: #afafaf;
+  --left-sidebar_selection-color: #ffffff;
 }
 
 * {
@@ -30,24 +30,15 @@
   cursor: pointer;
 }
 
-#left-sidebar_button_text {
+#left-sidebar_button object {
   position: absolute;
   top: 0px;
   right: 0px;
-  width: 30px;
-  height: 30px;
-  font-size: 13px;
-  border: solid 1px red;
-  text-align: center;
-}
-
-#left-sidebar_button_text p {
-  padding: 0px 0px 0px 0px;
 }
 
 #left-sidebar_content {
   position: absolute;
-  top: 10%;
+  top: 60px;
   left: 5%;
   width: 90%;
   height: 85%;
@@ -112,25 +103,23 @@
 #header-section {
   position: fixed;
   height: 10%;
-  width: 90%;
-  left: 60px;
-  top: 0%;
+  right: 0px;
+  top: 0px;
   font-size: 80%;
 }
 
 #main-section {
   position: fixed;
   top: 10%;
-  left: 60px;
+  right: 0px;
   height: 80%;
-  width: 90%;
 }
 
 #footer-section {
   position: fixed;
   height: 10%;
   width: 90%;
-  left: 60px;
-  top: 90%;
+  right: 0px;
+  bottom: 0px;
   font-size: 80%;
 }

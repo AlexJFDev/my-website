@@ -19,17 +19,18 @@
           }
         }
       }
+      let widthModulator = -60;
 
       function reloadSideBar(sidebarMap) {
         let leftSideBarOpen = sidebarMap["left-side-bar-open"];
         let activeNavigationMenu = sidebarMap["active-navigation-menu"];
         if (leftSideBarOpen) {
-          document.getElementById("left-sidebar").style.left = "0%";
+          document.getElementById("left-sidebar").style.left = "0px";
           document.getElementById("left-sidebar_content").style.visibility = "visible";
-          document.getElementById("left-sidebar_button_text").innerHTML = "<<<";
-          document.getElementById("header-section").style.width = "75%";
-          document.getElementById("main-section").style.width = "75%";
-          document.getElementById("footer-section").style.width = "75%";
+          widthModulator = -318;
+          resizeContent()
+
+          if (!activeNavigationMenu) return;
 
           let sortButtons = document.getElementsByClassName("sort-button");
           for (let element of sortButtons) element.style.backgroundColor = "var(--left-sidebar_text-color)";
@@ -48,12 +49,12 @@
             }
           }
         } else {
-          document.getElementById("left-sidebar").style.left = "-15%";
+          document.getElementById("left-sidebar").style.left = "-258px";
           document.getElementById("left-sidebar_content").style.visibility = "hidden";
-          document.getElementById("left-sidebar_button_text").innerHTML = ">>>";
-          document.getElementById("header-section").style.width = "90%";
-          document.getElementById("main-section").style.width = "90%";
-          document.getElementById("footer-section").style.width = "90%";
+          widthModulator = -60;
+          resizeContent()
+
+          if (!activeNavigationMenu) return;
 
           document.getElementById(`navigation-menu_by-${activeNavigationMenu}`).style.visibility = "hidden";
         }
@@ -84,13 +85,28 @@
         }
         reloadSideBar(sidebarMap);
       }
+
+      function resizeContent(){
+        windowWidth = window.innerWidth + widthModulator
+        document.getElementById("header-section").style.width = `${windowWidth}px`;
+        document.getElementById("main-section").style.width = `${windowWidth}px`;
+        document.getElementById("footer-section").style.width = `${windowWidth}px`;
+      }
+
+      window.onload = function() {
+        resizeContent();
+      }
+
+      window.onresize = function() {
+        resizeContent();
+      }
     </script>
   </head>
   <body>
     <!-- Left Side Bar Start -->
     <div id="left-sidebar">
-      <button id="left-sidebar_button" onclick="toggleSideBar()">
-        <div id="left-sidebar_button_text"><p>>>></p></div>
+      <button id="left-sidebar_button" onclick="toggleSideBar();">
+        <object id ="hamburger" type="image/svg+xml" data="hamburger.svg" width="30" height="30"></object>
       </button>
       <!-- Left Side Bar Content Start -->
       <div id="left-sidebar_content">
@@ -144,6 +160,7 @@
     </div>
     <div id="main-section">
       <p>Welcome to my website! It's being hosted with Apache on a Raspberry PI.<br></p>
+      <button  onclick="document.getElementById('hamburger').contentDocument.getElementById('eewUFzPt3RK1').dispatchEvent(new Event('click'));"></button>
     </div>
     <div id="footer-section" style="text-align: center;"></div>
     <script src="/footerGenerator.js"></script>
