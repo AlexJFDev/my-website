@@ -21,16 +21,14 @@
       <h1 id='heading'>Java Dates</h1>
     </div>
     <div id="main-section">
-      <h1 class="heading">Java Dates</h1>
       <p>Java has a calendar function that can be used for preforming calculations on the Date.</p>
       <h2>The Package</h2>
-      <p>There are 2 packages that come in java.util. that deal with dates. There is java.util.Date and java.util.Calendar. You should use java.util.Calendar because java.util.Date is depreciated.</p>
+      <p>There are 2 packages that come in java.util that work with dates. There is java.util.Date and java.util.Calendar. You should use java.util.Calendar because java.util.Date is depreciated.</p>
       <h2>Getting The Instance</h2>
       <p>Calendar is static meaning "new Calendar()" won't work. Instead you should use "Calendar.getInstance()" to get a static instance of the Calendar.</p>
       <h2>Some Code</h2>
       <p>This code:</p>
-      <pre><code>
-Calendar calendar = Calendar.getInstance();
+      <pre><code>Calendar calendar = Calendar.getInstance();
 String todaysDate = String.format("%tc", calendar);
 System.out.println(todaysDate);
 String todaysTime = String.format("%tr", calendar);
@@ -42,8 +40,7 @@ System.out.println(month);
 String day = String.format("%tD", calendar);
 System.out.println(day);
 String weekMonthDay = String.format("%tA, %&lt;tB %&lt;td", calendar);
-System.out.println(weekMonthDay);
-      </code></pre>
+System.out.println(weekMonthDay);</code></pre>
       <p>Gives this output:</p>
       <pre>
 Mon Nov 29 09:00:22 EST 2021
@@ -51,9 +48,8 @@ Mon Nov 29 09:00:22 EST 2021
 Monday
 November
 11/29/21
-Monday, November 29
-      </pre>
+Monday, November 29</pre>
     </div>
-    <div id="footer-section" style="text-align: center;"></div>
+    <div id="footer-section"></div>
   </body>
 </html>

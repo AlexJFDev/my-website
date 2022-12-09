@@ -21,84 +21,79 @@
       <h1 id='heading'>Java Pool Puzzle</h1>
     </div>
     <div id="main-section">
-      <h1 class="heading">Pool Puzzle</h1>
-        <p>From the following incomplete code:</p>
-        <pre><code>
-import javax.swing.*;
+      <p>From the following incomplete code:</p>
+      <pre><code>import javax.swing.*;
 import java.awt.*;
 public class Animate {
-int x = 1;
-int y = 1;
-public static void main (String[] args) {
+  int x = 1;
+  int y = 1;
+  public static void main (String[] args) {
     Animate gui = new Animate();
     gui.go();
-}
-public void go(){
+  }
+  public void go(){
     JFrame ___________ = new JFrame();
     frame.setDefaultCloseOperation(
-        JFrame.EXIT_ON_CLOSE);
+      JFrame.EXIT_ON_CLOSE);
     ___________;
     ___________.getContentPane().add(drawP);
     ___________;
     ___________.setVisible(true);
     for (int i = 0; i < 124; ___________){
-        ___________;
-        ___________;
-        try{
-            Thread.sleep(50);
-        } catch(Exception ex) { }
+      ___________;
+      ___________;
+      try{
+        Thread.sleep(50);
+      } catch(Exception ex) { }
     }
-}
-class MyDrawP extends JPanel {
+  }
+  class MyDrawP extends JPanel {
     public void paintComponent(Graphics
-                        ___________) {
-            ___________;
-            ___________;
-            ___________;
-            ___________;
+    ___________) {
+      ___________;
+      ___________;
+      ___________;
+      ___________;
     }
-}
-}
-        <de></pre>
-        <p>Create a program that opens a new window and creates a shrinking blue square.</p>
-        <p>This was my solution:</p>
-        <pre><code>
-import javax.swing.*;
+  }
+}<code></pre>
+      <p>Create a program that opens a new window and creates a shrinking blue square.</p>
+      <p>This was my solution:</p>
+      <pre><code>import javax.swing.*;
 import java.awt.*;
 public class Animate {
-    int x = 1;
-    int y = 1;
-    public static void main (String[] args) {
-        Animate gui = new Animate();
-        gui.go();
+  int x = 1;
+  int y = 1;
+  public static void main (String[] args) {
+    Animate gui = new Animate();
+    gui.go();
+  }
+  public void go(){
+    JFrame frame = new JFrame();
+    frame.setDefaultCloseOperation(
+      JFrame.EXIT_ON_CLOSE);
+    MyDrawP drawP = new MyDrawP();
+    frame.getContentPane().add(drawP);
+    frame.setSize(500,270);
+    frame.setVisible(true);
+    for (int i = 0; i < 124; i++, y++, x++){
+      x++;
+      drawP.repaint();;
+      try{
+        Thread.sleep(50);
+      } catch(Exception ex) { }
     }
-    public void go(){
-        JFrame frame = new JFrame();
-        frame.setDefaultCloseOperation(
-            JFrame.EXIT_ON_CLOSE);
-        MyDrawP drawP = new MyDrawP();
-        frame.getContentPane().add(drawP);
-        frame.setSize(500,270);
-        frame.setVisible(true);
-        for (int i = 0; i < 124; i++, y++, x++){
-            x++;
-            drawP.repaint();;
-            try{
-                Thread.sleep(50);
-            } catch(Exception ex) { }
-        }
+  }
+  class MyDrawP extends JPanel {
+    public void paintComponent(Graphics g) {
+        g.setColor(Color.white);
+        g.fillRect(0, 0, 500, 250);
+        g.setColor(Color.blue);;
+        g.fillRect(x,y,500-x*2,250-y*2);
     }
-    class MyDrawP extends JPanel {
-        public void paintComponent(Graphics g) {
-                g.setColor(Color.white);
-                g.fillRect(0, 0, 500, 250);
-                g.setColor(Color.blue);;
-                g.fillRect(x,y,500-x*2,250-y*2);
-        }
-    }
-}
-        </code></pre>
+  }
+}</code></pre>
     </div>
-    <div id="footer-section" style="text-align: center;"></div>
+    <div id="footer-section"></div>
   </body>
 </html>

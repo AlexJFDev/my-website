@@ -168,6 +168,10 @@ a:active {
   font-size: 12px;
 }
 
+#header-section h1 {
+  font-size: 32px;
+}
+
 #main-section {
   position: fixed;
   top: 60px;
@@ -190,4 +194,5 @@ a:active {
   right:0;
   bottom:0;
   font-size: 12px;
+  text-align: center;
 }

@@ -44,7 +44,9 @@ function toggleDropdown(dropdown) {
   
 window.onload = function(){
   $("#left-sidebar").load("/external.html #sidebar");
-  $("#footer-section").load("/external.html #footer", reloadFooter());
+  $("#footer-section").load("/external.html #footer", function() {
+    reloadFooter();
+  });
 }
 
 function reloadFooter() {
@@ -59,9 +61,7 @@ function reloadContent(url){
   });
   $("#main-section").load(`${url} #main-section`, function() {
     gsap.to("#main-section", {duration: 0, left: "318px"});
-  });
-  $("#footer-section").load(`${url} #footer-section`, function() {
-    gsap.to("#footer-section", {duration: 0, left: "318px"});
+    hljs.initHighlightingOnLoad();
   });
 
   window.history.pushState("", "", `${url}`);
