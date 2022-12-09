@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title class="heading">Octal and Hex Numbers</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!--Should be /styles.css-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/functions.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <!-- Left Side Bar Start -->
+    <div id="left-sidebar"></div>
+    <!-- Left Side Bar End -->
+    <div id="header-section">
+      <p id="date">9/1/22</p>
+      <h1 id='heading'>The Octal and Hexadecimal Numbers</h1>
+    </div>
+    <div id="main-section">
+      <p>This post is based on part <a href="https://ubuntourist.codeberg.page/Altair-8800/part-1.html#e-the-octal-system">1E of the Altair 8800 manual</a> with extra info about Hexidecimal.</p>
+      <p>The Altair uses an eight bit binary input. Since writing out eight digits for every step would be tedious the manual suggests writting instructions with Octal numbers from 0-7. Because Octal digits are the same as three bits; three octal digits are used. However there is one problem with this. Three Octal digits would represent nine bits not eight so the last octal digit only ranges from 0 to 3.</p>
+      <p>For example, the binary instruction 10011011 is represented as 223 in octal. In normal decimal it is 155.</p>
+      <p>Instead of using Octal you could also use Hexidecimal to represent Altair instructions. In my opinion this is better since two Hexidecimal digits, representing four bits each fit neatly into the Altair's eight bit instructions the only problem with using Hexidecimal is that the Altair's manual uses Octal meaning that you'll have to convert from Octal to Hex frequently.</p>
+      <p>The previous example, 10011011, is represented as 9B.</p>
+    </div>
+    <div id="footer-section" style="text-align: center;"></div>
+  </body>
+</html>

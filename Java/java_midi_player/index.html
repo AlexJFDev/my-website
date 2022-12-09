@@ -2,16 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title class="heading">Java Dates</title>
+    <title class="heading">Java Midi Player</title>
     <link rel="stylesheet" href="/styles.css">
+    <!--Should be /styles.css-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/functions.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-  <!-- content starts below here -->
-    <div id="sidebar"></div>
-    <div id="date"><p>1/10/2022</p></div>
-    <div id="main-content">
-    <!-- main content starts below here -->
-      <h1 class="heading">Java Dates</h1>
+    <!-- Left Side Bar Start -->
+    <div id="left-sidebar"></div>
+    <!-- Left Side Bar End -->
+    <div id="header-section">
+      <p id="date">1/10/22</p>
+      <h1 id='heading'>Java Midi Player</h1>
+    </div>
+    <div id="main-section">
       <a href="/files/java-midi-player.jar" download><h2>Download</h2></a>
       <a href="https://github.com/likebeingawesome/Java-Midi-Player.jar" download><h2>Git Repo</h2></a>
       <p>This is a Java program that plays midi sounds from a JSON file.</p>
@@ -19,17 +28,11 @@
       <p>Start the program with the following command:</p>
       <code>java -jar java-midi-player.jar</code>
       <p>Alternatively you can just double click to run it.
-      <br>Keep in mind the program will need read permissions to work properly.
-      <br>Then click "Select a File", next select your song file, and then click open.
-      <br> The song should begin to play.
+        <br>Keep in mind the program will need read permissions to work properly.
+        <br>Then click "Select a File", next select your song file, and then click open.
+        <br> The song should begin to play.
       </p>
-	  <!-- main content ends above here -->
     </div>
-    <footer id="verification-footer" style="text-align: center;"></footer>
-    <!-- Javascript imports start below here -->
-    <script src="/sideBarGenerator.js"></script>
-    <script src="/footerGenerator.js"></script>
-    <!-- Javascript imports end above here -->
-  <!-- content ends above here -->
+    <div id="footer-section" style="text-align: center;"></div>
   </body>
 </html>

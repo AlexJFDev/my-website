@@ -2,110 +2,112 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title class="heading">Gardening Blog 1</title>
+    <title class="heading">HTML Forms</title>
     <link rel="stylesheet" href="/styles.css">
+    <!--Should be /styles.css-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/functions.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-  <!-- content starts below here -->
-    <div id="sidebar"></div>
-    <div id="date"><p>4/19/2022</p></div>
-    <div id="main-content">
-    <!-- main content starts below here -->
-        <h1 class="heading">HTML Forms</h1>
-        <p>
-        <!-- The line breaks are just to make this code easier to read -->
-        HTML Forms are the most basic way to add user interactivity to a website. 
-        With a backend server the data inputted into the form can be saved on a server and used. 
-        Alternatively cookies could be used to save the data locally.
-        </p>
-        <h2>Original Input Types</h2>
-        <p>This form contains all the original html form inputs.</p>
-        <form action="#Original-Inputs" method="get" class="form-example__original-inputs">
-        <label for="reset-button">This is a reset button</label>
-        <input type="reset" name="reset-button" id="reset-button">
-        <br> 
-        <label for="text-input">This field takes any text input:</label>
-        <input type="text" name="text-input" id="text-input">
-        <br>
-        <label for="required-input">This field is required</label>
-        <input type="text" name="required-input" id="required-input">
-        <br>
-        <label for="password-input">This data input into this field is hidden:</label>
-        <input type="password" name="password-input" id="password-input">
-        <br>
-        <p>These are radio buttons:<p>
-        <div id="radio-button__div">
-            <input type="radio" name="radio-button" id="radio-button__one">
-            <input type="radio" name="radio-button" id="radio-button__two">
-            <input type="radio" name="radio-button" id="radio-button__three">
-            <input type="radio" name="radio-button" id="radio-button__four">
-        </div>
-        <p>These are checkboxes:</p>
-        <div id="checkbox-button__div">
-            <input type="checkbox" name="checkbox-button" id="checkbox-button__one">
-            <input type="checkbox" name="checkbox-button" id="checkbox-button__two">
-            <input type="checkbox" name="checkbox-button" id="checkbox-button__three">
-            <input type="checkbox" name="checkbox-button" id="checkbox-button__four">
-        </div>
-        <label for="file-input">This is a file input:</label>
-        <input type="file" name="file-input" id="file-input">
-        <br>
-        <input type="button" name="event-button" id="event-button" value="This button is an event trigger">
-        <br>
-        <label for="submit-button__one">This is a submit button:</label>
-        <input type="submit" name="submit-button" id="submit-button__one">
-        </form>
-        <h2>HTML5 Input Types</h2>
-        <p>This form contains all the input types added in HTML5</p>
-        <form action="#HTML5-Inputs" method="get" class="form-example__html5-inputs">
-        <label for="color-input">This is a color input:</label>
-        <input type="color" name="color-input" id="color-input">
-        <br>
-        <label for="time-input">This is a time input:</label>
-        <input type="time" name="time-input" id="time-input">
-        <br>
-        <label for="month-input">This is a month input:</label>
-        <input type="month" name="month-input id="month-input">
-        <br>
-        <label for="week-input">This is a week input:</label>
-        <input type="week" name="week-input" id="week-input">
-        <br>
-        <label for="date-input">This is a date input:</label>
-        <input type="date" name="date-input id="date-input">
-        <br>
-        <label for="datetime-input">This is a datetime input:</label>
-        <input type="datetime" name="datetime-input" id="datetime-input">
-        <br>
-        <label for="datetime-timezone">This is a datetime and timezone input:</label>
-        <input type="datetime-local" name="datetime-timezone" id="datetime-timezone">
-        <br>
-        <label for="email-input">This is an email input:</label>
-        <input type="email" name="email-input" id="email-input">
-        <br>
-        <label for="url-input">This is a url input:</label>
-        <input type="url" name="url-input" id="url-input">
-        <br>
-        <label for="search-input">This is a search input:</label>
-        <input type="search" name="search-input" id="search-input">
-        <br>
-        <label for="number-input">This is a number input:</label>
-        <input type="number" name="number-input" id="number-input">
-        <br>
-        <label for="slider-input">This is a slider input:</label>
-        <input type="range" name="slider-input" id="slider-input">
-        <br>
-        <label for="telephone-input">This is a telephone number input:</label>
-        <input type="tel" name="telephone-input" id="telephone-input">
-        <br>
-        <input type="submit" name="submit-button" id="submit-button__two">
-        </form>
-	  <!-- main content ends above here -->
+    <!-- Left Side Bar Start -->
+    <div id="left-sidebar"></div>
+    <!-- Left Side Bar End -->
+    <div id="header-section">
+      <p id="date">4/19/22</p>
+      <h1 id='heading'>HTML Forms</h1>
     </div>
-    <footer id="verification-footer" style="text-align: center;"></footer>
-    <!-- Javascript imports start below here -->
-    <script src="/sideBarGenerator.js"></script>
-    <script src="/footerGenerator.js"></script>
-    <!-- Javascript imports end above here -->
-  <!-- content ends above here -->
+    <div id="main-section">
+      <p>
+      HTML Forms are the most basic way to add user interactivity to a website. 
+      With a backend server the data inputted into the form can be saved on a server and used. 
+      Alternatively cookies could be used to save the data locally.
+      </p>
+      <h2>Original Input Types</h2>
+      <p>This form contains all the original html form inputs.</p>
+      <form action="#Original-Inputs" method="get" class="form-example__original-inputs">
+      <label for="reset-button">This is a reset button</label>
+      <input type="reset" name="reset-button" id="reset-button">
+      <br> 
+      <label for="text-input">This field takes any text input:</label>
+      <input type="text" name="text-input" id="text-input">
+      <br>
+      <label for="required-input">This field is required</label>
+      <input type="text" name="required-input" id="required-input">
+      <br>
+      <label for="password-input">This data input into this field is hidden:</label>
+      <input type="password" name="password-input" id="password-input">
+      <br>
+      <p>These are radio buttons:<p>
+      <div id="radio-button__div">
+        <input type="radio" name="radio-button" id="radio-button__one">
+        <input type="radio" name="radio-button" id="radio-button__two">
+        <input type="radio" name="radio-button" id="radio-button__three">
+        <input type="radio" name="radio-button" id="radio-button__four">
+      </div>
+      <p>These are checkboxes:</p>
+      <div id="checkbox-button__div">
+        <input type="checkbox" name="checkbox-button" id="checkbox-button__one">
+        <input type="checkbox" name="checkbox-button" id="checkbox-button__two">
+        <input type="checkbox" name="checkbox-button" id="checkbox-button__three">
+        <input type="checkbox" name="checkbox-button" id="checkbox-button__four">
+      </div>
+      <label for="file-input">This is a file input:</label>
+      <input type="file" name="file-input" id="file-input">
+      <br>
+      <input type="button" name="event-button" id="event-button" value="This button is an event trigger">
+      <br>
+      <label for="submit-button__one">This is a submit button:</label>
+      <input type="submit" name="submit-button" id="submit-button__one">
+      </form>
+      <h2>HTML5 Input Types</h2>
+      <p>This form contains all the input types added in HTML5</p>
+      <form action="#HTML5-Inputs" method="get" class="form-example__html5-inputs">
+      <label for="color-input">This is a color input:</label>
+      <input type="color" name="color-input" id="color-input">
+      <br>
+      <label for="time-input">This is a time input:</label>
+      <input type="time" name="time-input" id="time-input">
+      <br>
+      <label for="month-input">This is a month input:</label>
+      <input type="month" name="month-input id="month-input">
+      <br>
+      <label for="week-input">This is a week input:</label>
+      <input type="week" name="week-input" id="week-input">
+      <br>
+      <label for="date-input">This is a date input:</label>
+      <input type="date" name="date-input id="date-input">
+      <br>
+      <label for="datetime-input">This is a datetime input:</label>
+      <input type="datetime" name="datetime-input" id="datetime-input">
+      <br>
+      <label for="datetime-timezone">This is a datetime and timezone input:</label>
+      <input type="datetime-local" name="datetime-timezone" id="datetime-timezone">
+      <br>
+      <label for="email-input">This is an email input:</label>
+      <input type="email" name="email-input" id="email-input">
+      <br>
+      <label for="url-input">This is a url input:</label>
+      <input type="url" name="url-input" id="url-input">
+      <br>
+      <label for="search-input">This is a search input:</label>
+      <input type="search" name="search-input" id="search-input">
+      <br>
+      <label for="number-input">This is a number input:</label>
+      <input type="number" name="number-input" id="number-input">
+      <br>
+      <label for="slider-input">This is a slider input:</label>
+      <input type="range" name="slider-input" id="slider-input">
+      <br>
+      <label for="telephone-input">This is a telephone number input:</label>
+      <input type="tel" name="telephone-input" id="telephone-input">
+      <br>
+      <input type="submit" name="submit-button" id="submit-button__two">
+      </form>
+    </div>
+    <div id="footer-section" style="text-align: center;"></div>
   </body>
 </html>

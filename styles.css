@@ -177,6 +177,12 @@ a:active {
   overflow-y: scroll;
 }
 
+#date {
+  float: right;
+  margin: 16px 32px;
+  font-size: 14px;
+}
+
 #footer-section {
   position: fixed;
   height: 60px;
