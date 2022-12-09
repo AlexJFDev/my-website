@@ -56,6 +56,9 @@ function reloadFooter() {
 }
 
 function reloadContent(url){
+  $("title").load(`${url} title`, function(data) {
+    document.title = $(this).text();
+  });
   $("#header-section").load(`${url} #header-section`, function() {
     gsap.to("#header-section", {duration: 0, left: "318px"});
   });
