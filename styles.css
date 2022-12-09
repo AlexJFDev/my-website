@@ -135,7 +135,13 @@ a:active {
   margin: 1px 0px;
 }
 
-#navigation-menu_by-topic .topic-heading {
+#navigation-menu_by-blog .blog-heading {
+  font-size: 28px;
+  display: inline-block;
+  margin: 0px 2px;
+}
+
+#navigation-menu_by-external .external-heading {
   font-size: 28px;
   display: inline-block;
   margin: 0px 2px;

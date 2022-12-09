@@ -7,7 +7,8 @@
   <div id="left-sidebar_sort-menu">
     <button class="sort-button" id="sort-menu_home-button" onclick="reloadContent('/')">Home</button>
     <!--button class="sort-button" id="sort-menu_date-button" onclick="setActiveNavigationMenu('date')">Date</button-->
-    <button class="sort-button" id="sort-menu_topic-button" onclick="setActiveNavigationMenu('topic')">Topic</button>
+    <button class="sort-button" id="sort-menu_blog-button" onclick="setActiveNavigationMenu('blog')">Blog</button>
+    <button class="sort-button" id="sort-menu_external-button" onclick="setActiveNavigationMenu('external')">External Links</button>
   </div>
   <!-- Left Side Bar Navigation Menus Start -->
   <div id="left-sidebar_navigation-menu">
@@ -42,12 +43,12 @@
       </div>
     </div>
     <!-- Left Side Bar Date Menu End -->
-    <!-- Left Side Bar Topic Menu Start -->
-    <div class="sorted-menu" id="navigation-menu_by-topic">
+    <!-- Left Side Bar blog Menu Start -->
+    <div class="sorted-menu" id="navigation-menu_by-blog">
       <div class="collapsed-dropdown" id="dropdown_minecraft">
         <button class="dropdown-heading" id="dropdown_minecraft_heading" onclick="toggleDropdown('minecraft')">
-          <p class="topic-heading">Minecraft</p>
-          <div class="topic-heading-arrow">
+          <p class="blog-heading">Minecraft</p>
+          <div class="blog-heading-arrow">
             <p class="collapsed-arrow">▲</p>
             <p class="expanded-arrow">▼</p>
           </div>
@@ -59,8 +60,8 @@
       </div>
       <div class="collapsed-dropdown" id="dropdown_java">
         <button class="dropdown-heading" id="dropdown_java_heading" onclick="toggleDropdown('java')">
-          <p class="topic-heading">Java</p>
-          <div class="topic-heading-arrow">
+          <p class="blog-heading">Java</p>
+          <div class="blog-heading-arrow">
             <p class="collapsed-arrow">▲</p>
             <p class="expanded-arrow">▼</p>
           </div>
@@ -74,8 +75,8 @@
       </div>
       <div class="collapsed-dropdown" id="dropdown_csc205">
         <button class="dropdown-heading" id="dropdown_csc205_heading" onclick="toggleDropdown('csc205')">
-          <p class="topic-heading">CSC 205</p>
-          <div class="topic-heading-arrow">
+          <p class="blog-heading">CSC 205</p>
+          <div class="blog-heading-arrow">
             <p class="collapsed-arrow">▲</p>
             <p class="expanded-arrow">▼</p>
           </div>
@@ -89,8 +90,8 @@
       </div>
       <div class="collapsed-dropdown" id="dropdown_miscellaneous">
         <button class="dropdown-heading" id="dropdown_miscellaneous_heading" onclick="toggleDropdown('miscellaneous')">
-          <p class="topic-heading">Miscellaneous</p>
-          <div class="topic-heading-arrow">
+          <p class="blog-heading">Miscellaneous</p>
+          <div class="blog-heading-arrow">
             <p class="collapsed-arrow">▲</p>
             <p class="expanded-arrow">▼</p>
           </div>
@@ -101,7 +102,26 @@
         </div>
       </div>
     </div>
-    <!-- Left Side Bar Topic Menu End -->
+    <!-- Left Side Bar blog Menu End -->
+    <div class="sorted-menu" id="navigation-menu_by-external">
+      <div class="collapsed-dropdown" id="dropdown_github">
+        <button class="dropdown-heading" id="dropdown_github_heading" onclick="toggleDropdown('github')">
+          <p class="external-heading">Github</p>
+          <div class="external-heading-arrow">
+            <p class="collapsed-arrow">▲</p>
+            <p class="expanded-arrow">▼</p>
+          </div>
+        </button>
+        <div class="dropdown-content" id="github_content">
+          <a href="https://github.com/AlexJFDev">AlexJFDev</a>
+          <a href="https://github.com/AlexJFDev/my-website">This Website</a>
+          <a href="https://github.com/AlexJFDev/Homegrown">Homegrown</a>
+          <a href="https://github.com/AlexJFDev/altair-compiler">Altair Compiler</a>
+          <a href="https://github.com/AlexJFDev/java-physics-simulation">Java Physics Simulation</a>
+          <a href="https://github.com/AlexJFDev/Java-Midi-Player">Java Midi Player</a>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- Left Side Bar Navigation Menus End -->
   </div>
