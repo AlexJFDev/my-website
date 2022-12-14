@@ -41,13 +41,6 @@ function toggleDropdown(dropdown) {
     document.getElementById(`dropdown_${dropdown}`).className = "collapsed-dropdown";
   }
 }
-  
-window.onload = function(){
-  $("#left-sidebar").load("/external.html #sidebar");
-  $("#footer-section").load("/external.html #footer", function() {
-    reloadFooter();
-  });
-}
 
 function reloadFooter() {
   let url = window.location.href;
@@ -55,7 +48,7 @@ function reloadFooter() {
   document.getElementById("css-validation").href = `http://jigsaw.w3.org/css-validator/validator?uri=${url}?profile=css3`
 }
 
-function reloadContent(url){
+function updateContent(url) {
   $("title").load(`${url} title`, function(data) {
     document.title = $(this).text();
   });
@@ -66,7 +59,22 @@ function reloadContent(url){
     gsap.to("#main-section", {duration: 0, left: "318px"});
     hljs.initHighlightingOnLoad();
   });
+}
+
+function loadPage(url) {
+  updateContent(url)
 
   window.history.pushState("", "", `${url}`);
   reloadFooter()
+}
+
+window.onload = function() {
+  $("#left-sidebar").load("/external.html #sidebar");
+  $("#footer-section").load("/external.html #footer", function() {
+    reloadFooter();
+  });
+}
+
+window.onpopstate = function() {
+  updateContent(window.location.pathname);
 }
